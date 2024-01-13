@@ -41,6 +41,11 @@ public class Spaceship extends Actor
      * Move spaceship vertically.
      */
     private void moveToDirection(boolean directionIsRight) {
+        // Check if the spaceship is at the edge of a side.
+        if((directionIsRight && getX() > 298) || !directionIsRight && getX() < 2) {
+            // Move the spaceshipt to the other side.
+            setLocation(300 - getX(), getY());
+        }
         if(directionIsRight) {
             setLocation(getX() + movingSpeed, getY());  
         } 
