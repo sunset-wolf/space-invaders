@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Spaceship
+comment0.text=\n\ Write\ a\ description\ of\ class\ spaceship\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Spaceship()
+comment1.text=\n\ Constructor\ to\ initialize\ the\ actor.\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
+comment3.params=
+comment3.target=void\ checkKeys()
+comment3.text=\n\ Check\ the\ user's\ interaction\ with\ the\ game.\n
+comment4.params=directionIsRight
+comment4.target=void\ moveToDirection(boolean)
+comment4.text=\n\ Move\ spaceship\ vertically.\n
+numComments=5
