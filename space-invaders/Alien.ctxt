@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Alien
+comment0.text=\n\ Alien\ which\ destroys\ the\ spaceship.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment1.params=colour
+comment1.target=Alien(AlienColour)
+comment1.text=\n\ Constructor\ to\ initialize\ the\ actor.\n
+comment2.params=
+comment2.target=void\ setAlienImage()
+comment2.text=\n\ Set\ the\ image\ for\ the\ alien.\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
+comment4.params=
+comment4.target=void\ moveHorizontal()
+comment4.text=\n\ Move\ alien\ horizontal\ with\ the\ moving\ speed\ initialized.\n
+numComments=5
