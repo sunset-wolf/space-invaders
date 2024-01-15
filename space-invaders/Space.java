@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Space extends World
 {
-    private static int height = 500;
-    private static int width = 300;
+    private static final int HEIGHT = 500;
+    private static final int WIDTH = 300;
     /**
      * Constructor for objects of class Space.
      * 
@@ -17,9 +17,9 @@ public class Space extends World
     public Space()
     {    
         // Create a new world with the height and width defined in this class.
-        super(width, height, 1); 
+        super(WIDTH, HEIGHT, 1); 
         setBackground();
-        addObject(new Spaceship(), width/2, height/8*7);
+        addObject(new Spaceship(), WIDTH/2, HEIGHT/8*7);
     }
     
     /**

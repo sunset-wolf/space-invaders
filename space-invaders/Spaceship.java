@@ -42,7 +42,7 @@ public class Spaceship extends Actor
      */
     private void moveToDirection(boolean directionIsRight) {
         // Check if the spaceship is at the edge of a side.
-        if((directionIsRight && getX() > 298) || !directionIsRight && getX() < 2) {
+        if((directionIsRight && getX() > 295) || !directionIsRight && getX() < 5) {
             // Move the spaceshipt to the other side.
             setLocation(300 - getX(), getY());
         }
