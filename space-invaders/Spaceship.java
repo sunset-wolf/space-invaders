@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class spaceship here.
+ * Spaceship which destroys aliens.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
  */
 public class Spaceship extends Actor
 {
@@ -29,18 +29,18 @@ public class Spaceship extends Actor
      */
     private void checkKeys() {
         if(Greenfoot.isKeyDown("right")) {
-            moveToDirection(true);
+            moveVertical(true);
         }
         
         if(Greenfoot.isKeyDown("left")) {
-            moveToDirection(false);
+            moveVertical(false);
         }
     }
     
     /**
      * Move spaceship vertically.
      */
-    private void moveToDirection(boolean directionIsRight) {
+    private void moveVertical(boolean directionIsRight) {
         // Check if the spaceship is at the edge of a side.
         if((directionIsRight && getX() > 295) || !directionIsRight && getX() < 5) {
             // Move the spaceshipt to the other side.

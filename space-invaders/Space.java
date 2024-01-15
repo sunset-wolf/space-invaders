@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is the Space world class.
+ * Space where the magic or the clashes happens.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
  */
 public class Space extends World
 {
@@ -20,6 +20,7 @@ public class Space extends World
         super(WIDTH, HEIGHT, 1); 
         setBackground();
         addObject(new Spaceship(), WIDTH/2, HEIGHT/8*7);
+        addObject(new Alien(AlienColour.GREEN), WIDTH/2, HEIGHT/2);
     }
     
     /**
