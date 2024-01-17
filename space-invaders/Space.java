@@ -16,11 +16,23 @@ public class Space extends World
      */
     public Space()
     {    
-        // Create a new world with the height and width defined in this class.
         super(WIDTH, HEIGHT, 1); 
         setBackground();
         addObject(new Spaceship(), WIDTH/2, HEIGHT/8*7);
         addObject(new Alien(AlienColour.GREEN), WIDTH/2, HEIGHT/2);
+        addObject(new Shot(false), WIDTH/2, HEIGHT/2);
+    }
+
+
+    /**
+     * Add a shot object
+     * 
+     * @param movingUp If shot moves up.
+     * @param xPosition The starting x-position.
+     * @param yPosition The starting y-position.
+     */
+    public void addShot(boolean movingUp, int xPosition, int yPosition) {
+        addObject(new Shot(movingUp), xPosition, yPosition);
     }
     
     /**
@@ -36,6 +48,7 @@ public class Space extends World
     
     /**
      * Create random stars.
+     * 
      * @param number The number of stars.
      */
     private void createStars(int number) 
