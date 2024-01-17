@@ -8,25 +8,43 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Spaceship extends Actor
 {
+    // The speed a spaceship can move.
     private int movingSpeed;
     
-    // Ther counter for the act method.  
+    // The counter for the act method.  
     private int actCounter = 0;
     
+    // True if user interaction is allowed.
+    private boolean isAllowedToInteract;
     
     /**
      * Constructor to initialize the actor.
      */
-    public Spaceship() {
+    public Spaceship(boolean isAllowedToInteract) {
         this.movingSpeed = 5;
+        this.isAllowedToInteract = isAllowedToInteract;
+        setSpaceshipImage();
     }
+    
+    /**
+     * Set the image of the spaceship
+     */
+    private void setSpaceshipImage() {
+        if(!isAllowedToInteract) {
+            GreenfootImage image = getImage();
+            image.scale(image.getWidth()/2, image.getHeight()/2);      
+            setImage(image);
+        }
+    }
+    
     /**
      * Act method which runs in endless loop.
      */
-    public void act()
-    {
-        checkKeys();
-        actCounter++;
+    public void act() {
+        if(isAllowedToInteract) {
+            checkKeys();
+            actCounter++;
+        }
     }
     
     /**
