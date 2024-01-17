@@ -20,7 +20,6 @@ public class Space extends World
         setBackground();
         addObject(new Spaceship(), WIDTH/2, HEIGHT/8*7);
         addObject(new Alien(AlienColour.GREEN), WIDTH/2, HEIGHT/2);
-        addObject(new Shot(false), WIDTH/2, HEIGHT/2);
     }
 
 

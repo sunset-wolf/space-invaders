@@ -34,6 +34,6 @@ public class Shot extends Actor
         }
         else {
             setLocation(getX(), getY() + movingSpeed);
-        }   
+        } 
     }
 }

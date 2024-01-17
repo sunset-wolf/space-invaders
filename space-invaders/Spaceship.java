@@ -10,6 +10,10 @@ public class Spaceship extends Actor
 {
     private int movingSpeed;
     
+    // Ther counter for the act method.  
+    private int actCounter = 0;
+    
+    
     /**
      * Constructor to initialize the actor.
      */
@@ -22,6 +26,7 @@ public class Spaceship extends Actor
     public void act()
     {
         checkKeys();
+        actCounter++;
     }
     
     /**
@@ -34,6 +39,11 @@ public class Spaceship extends Actor
         
         if(Greenfoot.isKeyDown("left")) {
             moveVertical(false);
+        }
+        
+        if(Greenfoot.isKeyDown("Space") && checkShootability()) {
+            final Space world = (Space) getWorld();
+             world.addShot(true, getX(), getY());
         }
     }
     
@@ -52,5 +62,15 @@ public class Spaceship extends Actor
         else {
             setLocation(getX() - movingSpeed, getY());  
         }
+    }
+    
+    /**
+     * If spaceship is able to fire a shot.
+     */
+    private boolean checkShootability() {
+        if(actCounter == 0 || actCounter % 5 == 0) {
+            return true;
+        }
+        return false;
     }
 }
