@@ -60,7 +60,7 @@ public class Spaceship extends Actor
         }
         
         if(Greenfoot.isKeyDown("Space") && checkShootability()) {
-            final Space world = (Space) getWorld();
+            final SpaceGame world = (SpaceGame) getWorld();
              world.addShot(true, getX(), getY() - getImage().getHeight()/2);
         }
     }

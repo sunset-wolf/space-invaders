@@ -8,40 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Space extends World
 {
-    private static final int HEIGHT = 500;
-    private static final int WIDTH = 300;
-    // The amount of lives for the user;
-    private int lives = 3;
+    // The height of the world.
+    public static final int HEIGHT = 500;    
+    // The width of the world.
+    public static final int WIDTH = 300;
+    
     /**
      * Constructor for objects of class Space.
-     * 
      */
     public Space()
     {    
         super(WIDTH, HEIGHT, 1); 
         setBackground();
-        addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
-        addObject(new Alien(AlienColour.GREEN), WIDTH/2, HEIGHT/2);
-        displayLives();
-    }
-    
-    private void displayLives() {
-        for(int x = 0; x < lives; x++) {
-                addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/15*1);
-        }
     }
 
-    /**
-     * Add a shot object
-     * 
-     * @param movingUp If shot moves up.
-     * @param xPosition The starting x-position.
-     * @param yPosition The starting y-position.
-     */
-    public void addShot(boolean movingUp, int xPosition, int yPosition) {
-        addObject(new Shot(movingUp), xPosition, yPosition);
-    }
-    
     /**
      * Set the background of the world.
      */
@@ -58,8 +38,7 @@ public class Space extends World
      * 
      * @param number The number of stars.
      */
-    private void createStars(int number) 
-    {
+    private void createStars(int number) {
         GreenfootImage background = getBackground();             
         for (int i=0; i < number; i++) {            
              int x = Greenfoot.getRandomNumber(getWidth());
