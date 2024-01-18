@@ -16,7 +16,7 @@ public class SpaceDashboard extends Space
     public SpaceDashboard()
     {    
         addFlyingAliens();
-        createTextMessages();
+        addTextMessages();
     }
     
     /**
@@ -38,25 +38,10 @@ public class SpaceDashboard extends Space
     }
     
     /**
-     * Creates the text messages.
+     * Add the text messages.
      */
-    private void createTextMessages() {
-        displayTextMessage("SPACE-INVADERS", 25, Color.GREEN, WIDTH / 2, HEIGHT / 15 * 2);
-        displayTextMessage("choose your game", 20, Color.WHITE, WIDTH / 2, HEIGHT / 15 * 3);
+    private void addTextMessages() {
+        addObject(new TextFlicker("SPACE-INVADERS", TextSizing.BIG, true, Color.GREEN), WIDTH / 2, HEIGHT / 15 * 2);
+        addObject(new TextFlicker("Choose your game", TextSizing.MIDDLE, true, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 3);
     }
-    
-    /**
-     * Display the text message with the specific text size and at the specific position
-     * 
-     * @param textMessage the message itself.
-     * @param textSize the text size of the message.
-     * @param colour The colour of the message.
-     * @param xPosition The x-position of the message.
-     * @param yPosition The y-position of the message.
-     */
-    private void displayTextMessage(String textMessage, int textSize, Color colour, int xPosition, int yPosition) {
-        GreenfootImage textImage = new GreenfootImage(textMessage, textSize, colour, null);
-        getBackground().drawImage(textImage, xPosition - textImage.getWidth() / 2, yPosition - textImage.getHeight() / 2);
-    }
-
 }
