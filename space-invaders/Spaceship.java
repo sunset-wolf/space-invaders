@@ -17,6 +17,9 @@ public class Spaceship extends Actor
     // True if user interaction is allowed.
     private boolean isAllowedToInteract;
     
+    // True if it is touching Alien
+    private boolean touchingAlien = false;
+    
     /**
      * Constructor to initialize the actor.
      */
@@ -70,13 +73,12 @@ public class Spaceship extends Actor
      * Check if spaceship is colliding with alien.
      */
     private void checkAlienCollision() {
-        boolean touching = false;
-        if (isTouching(Alien.class)) {
-            touching = true;
+        if (isTouching(Alien.class) && touchingAlien == false) {
+            touchingAlien = true;
             final SpaceGame world = (SpaceGame) getWorld();
             world.setLives(-1);
         } else {
-            touching = false;
+            touchingAlien = false;
         }
     }
     
