@@ -1,20 +1,20 @@
 #BlueJ class context
 comment0.target=SpaceGame
-comment0.text=\r\n\ SpaceGame\ where\ the\ game\ is\ played.\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
+comment0.text=\n\ SpaceGame\ where\ the\ game\ is\ played.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
 comment1.params=
 comment1.target=SpaceGame()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ SpaceGame.\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ SpaceGame.\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ addAliens()
-comment3.text=\r\n\ Add\ aliens\ to\ the\ game.\r\n
+comment3.text=\n\ Add\ aliens\ to\ the\ game.\n
 comment4.params=
 comment4.target=void\ displayLives()
-comment4.text=\r\n\ Display\ the\ amount\ of\ the\ user.\r\n
+comment4.text=\n\ Display\ the\ amount\ of\ the\ user.\n
 comment5.params=movingUp\ xPosition\ yPosition
 comment5.target=void\ addShot(boolean,\ int,\ int)
-comment5.text=\r\n\ Add\ a\ shot\ object.\r\n\ \r\n\ @param\ movingUp\ If\ shot\ moves\ up.\r\n\ @param\ xPosition\ The\ starting\ x-position.\r\n\ @param\ yPosition\ The\ starting\ y-position.\r\n
+comment5.text=\n\ Add\ a\ shot\ object.\n\ \n\ @param\ movingUp\ If\ shot\ moves\ up.\n\ @param\ xPosition\ The\ starting\ x-position.\n\ @param\ yPosition\ The\ starting\ y-position.\n
 comment6.params=newLives
 comment6.target=void\ setLives(int)
 numComments=7
