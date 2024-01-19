@@ -10,6 +10,7 @@ public class SpaceGame extends Space
 {
     // The amount of lives for the user;
     private int lives = 3;
+    private int score = 0;
     
     /**
      * Constructor for objects of class SpaceGame.
@@ -21,10 +22,12 @@ public class SpaceGame extends Space
         addObject(new EndLine(), WIDTH / 2, HEIGHT / 15 * 1);
         addAliens();
         displayLives();
+        displayScore(score);
     }
     
     public void act() {
         displayLives();
+        displayScore(score);
     }
     
     /**
@@ -45,6 +48,10 @@ public class SpaceGame extends Space
             addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/26*1);
         }
     }
+    
+    private void displayScore(int score) {
+        showText("Score: " + score, WIDTH/8*6, HEIGHT/15*1);
+    }
 
     /**
      * Add a shot object.
@@ -58,6 +65,10 @@ public class SpaceGame extends Space
     }
     
     public void setLives(int newLives) {
-        this.lives -= newLives;
+        this.lives += newLives;
+    }
+    
+    public void setScore(int newScore) {
+        this.score += newScore;
     }
 }

@@ -70,9 +70,13 @@ public class Spaceship extends Actor
      * Check if spaceship is colliding with alien.
      */
     private void checkAlienCollision() {
+        boolean touching = false;
         if (isTouching(Alien.class)) {
+            touching = true;
             final SpaceGame world = (SpaceGame) getWorld();
-            world.setLives(1);
+            world.setLives(-1);
+        } else {
+            touching = false;
         }
     }
     

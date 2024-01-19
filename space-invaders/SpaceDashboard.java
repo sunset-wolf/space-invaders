@@ -107,14 +107,13 @@ public class SpaceDashboard extends Space
                 keyPressed = true;
             }
             
-            if (!Greenfoot.isKeyDown("right")&& !Greenfoot.isKeyDown("left")&&!Greenfoot.isKeyDown("down")&&!Greenfoot.isKeyDown("up")) {
+            if (!Greenfoot.isKeyDown("down")&&!Greenfoot.isKeyDown("up")) {
                 // Reset the flag when the key is released
                 keyPressed = false;
             }
             if (Greenfoot.isKeyDown("enter")) {
                 keyDown = true;
             }
-            
             
             if ((!Greenfoot.isKeyDown("enter")) && keyDown == true) {
                 // Define which level to start
