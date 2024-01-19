@@ -42,7 +42,7 @@ public class SpaceGame extends Space
      */
     private void displayLives() {
         for(int x = 0; x < lives; x++) {
-            addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/16*1);
+            addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/26*1);
         }
     }
 
