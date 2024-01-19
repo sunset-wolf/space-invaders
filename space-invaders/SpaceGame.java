@@ -17,12 +17,22 @@ public class SpaceGame extends Space
     public SpaceGame()
     {    
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
-        addObject(new Alien(AlienColour.GREEN), WIDTH/2, HEIGHT/2);
+        addAliens();
         displayLives();
     }
     
     public void act() {
         displayLives();
+    }
+    
+    /**
+     * Add aliens to the game.
+     */
+    private void addAliens() {
+        int alienCount = 3;
+        for (int i = 1; i < alienCount+1; i++) {
+            addObject(new Alien(AlienColour.GREEN), WIDTH / alienCount*i - (WIDTH /alienCount)/2, HEIGHT/2);
+        }
     }
     
     /**
