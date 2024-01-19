@@ -52,11 +52,11 @@ public class SpaceDashboard extends Space
      * Add the text messages.
      */
     private void addTextMessages() {
-        addObject(new TextFlicker("SPACE-INVADERS", TextSizing.BIG, true, Color.GREEN), WIDTH / 2, HEIGHT / 15 * 2);
-        addObject(new TextFlicker("Choose your game", TextSizing.MIDDLE, true, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 3);
-        addObject(new TextFlicker("Level 1", TextSizing.MIDDLE, true, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 5);
-        addObject(new TextFlicker("Level 2", TextSizing.MIDDLE, true, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 6);
-        addObject(new TextFlicker("Level 3", TextSizing.MIDDLE, true, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 7);
+        addObject(new TextFlicker("SPACE-INVADERS", TextSizing.BIG, true, false, Color.GREEN), WIDTH / 2, HEIGHT / 15 * 2);
+        addObject(new TextFlicker("Choose your game", TextSizing.MIDDLE, true, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 3);
+        addObject(new TextFlicker("Level 1", TextSizing.MIDDLE, true, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 5);
+        addObject(new TextFlicker("Level 2", TextSizing.MIDDLE, true, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 6);
+        addObject(new TextFlicker("Level 3", TextSizing.MIDDLE, true, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 7);
     }
     
     /**

@@ -1,8 +1,9 @@
 import greenfoot.*;
 
 public class TextFlicker extends Actor {
-    private final String textMessage;
+    private String textMessage;
     private final boolean flickerOn;
+    private final boolean isUpdatable;
 
     private int smallTextSize;
     private int bigTextSize;
@@ -11,10 +12,11 @@ public class TextFlicker extends Actor {
     private Color colour;
     private TextSizing textSizing;
 
-    public TextFlicker(String textMessage, TextSizing textSizing, boolean flickerOn, Color colour) {
+    public TextFlicker(String textMessage, TextSizing textSizing, boolean flickerOn, boolean isUpdatable, Color colour) {
         this.textMessage = textMessage;
         this.textSizing = textSizing;
         this.flickerOn = flickerOn;
+        this.isUpdatable = isUpdatable;
         this.colour = colour;
         defineTextSizes();
         setImage(createTextImage());
@@ -32,7 +34,13 @@ public class TextFlicker extends Actor {
             count++;
             checkForCounterReset();
         }
+        
+        if (isUpdatable) {
+            final SpaceGame world = (SpaceGame) getWorld();
+            textMessage = String.valueOf(world.getScore());
+            setImage(createTextImage());
         }
+    }
     
     /**
      * Check if counter can be resetted.

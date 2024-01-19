@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
  * SpaceGame where the game is played.
@@ -25,9 +26,10 @@ public class SpaceGame extends Space
         displayScore(score);
     }
     
+    /**
+     * Act class.
+     */
     public void act() {
-        displayLives();
-        displayScore(score);
     }
     
     /**
@@ -50,16 +52,8 @@ public class SpaceGame extends Space
     }
     
     private void displayScore(int score) {
-        addObject(new TextFlicker("Score: ", TextSizing.MIDDLE, false, Color.WHITE), WIDTH/8*6, HEIGHT/26*1);
-        
-        // Get object at this position
-        Actor scoreObject = null; //getOneObjectAtOffset(WIDTH/8*7, HEIGHT/15*1, TextFlicker.class);
-
-        // Remove the object from the world
-        if (scoreObject != null) {
-            this.removeObject(scoreObject);
-        }
-        addObject(new TextFlicker(String.valueOf(score), TextSizing.MIDDLE, false, Color.WHITE), WIDTH/8*7, HEIGHT/26*1);
+        addObject(new TextFlicker("Score: ", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH/8*6, HEIGHT/26*1);
+        addObject(new TextFlicker(String.valueOf(score), TextSizing.MIDDLE, false, true, Color.WHITE), WIDTH/8*7, HEIGHT/26*1);
     }
 
     /**
@@ -77,7 +71,15 @@ public class SpaceGame extends Space
         this.lives += newLives;
     }
     
+    public int getLives() {
+        return lives;
+    }
+    
     public void setScore(int newScore) {
         this.score += newScore;
+    }
+    
+    public int getScore() {
+        return score;
     }
 }
