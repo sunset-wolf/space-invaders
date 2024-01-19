@@ -48,7 +48,7 @@ public class SpaceGame extends Space
     }
     
     private void displayScore(int score) {
-        addObject(new TextFlicker("Score: " + score , TextSizing.MIDDLE, false, Color.WHITE), WIDTH/8*6, HEIGHT/15*1);
+        showText("Score: " + score, WIDTH/8*6, HEIGHT/15*1);
     }
 
     /**
@@ -63,6 +63,10 @@ public class SpaceGame extends Space
     }
     
     public void setLives(int newLives) {
-        this.lives -= newLives;
+        this.lives += newLives;
+    }
+    
+    public void setScore(int newScore) {
+        this.score += newScore;
     }
 }

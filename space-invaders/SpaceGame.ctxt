@@ -19,4 +19,6 @@ comment6.target=void\ addShot(boolean,\ int,\ int)
 comment6.text=\r\n\ Add\ a\ shot\ object.\r\n\ \r\n\ @param\ movingUp\ If\ shot\ moves\ up.\r\n\ @param\ xPosition\ The\ starting\ x-position.\r\n\ @param\ yPosition\ The\ starting\ y-position.\r\n
 comment7.params=newLives
 comment7.target=void\ setLives(int)
-numComments=8
+comment8.params=newScore
+comment8.target=void\ setScore(int)
+numComments=9
