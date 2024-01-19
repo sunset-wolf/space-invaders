@@ -18,6 +18,8 @@ public class SpaceGame extends Space
     public SpaceGame()
     {    
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
+        addObject(new EndLine(), WIDTH / 2, HEIGHT / 15 * 14);
+        addObject(new EndLine(), WIDTH / 2, HEIGHT / 15 * 1);
         addAliens();
         displayLives();
         displayScore(score);
@@ -43,7 +45,7 @@ public class SpaceGame extends Space
      */
     private void displayLives() {
         for(int x = 0; x < lives; x++) {
-            addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/15*1);
+            addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/26*1);
         }
     }
     
