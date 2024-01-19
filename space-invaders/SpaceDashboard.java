@@ -115,7 +115,6 @@ public class SpaceDashboard extends Space
                 keyDown = true;
             }
             
-            
             if ((!Greenfoot.isKeyDown("enter")) && keyDown == true) {
                 // Define which level to start
                 if (selectedLevel == 1) {
