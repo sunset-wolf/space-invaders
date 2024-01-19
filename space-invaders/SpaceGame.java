@@ -21,6 +21,10 @@ public class SpaceGame extends Space
         displayLives();
     }
     
+    public void act() {
+        displayLives();
+    }
+    
     /**
      * Display the amount of the user.
      */
@@ -39,5 +43,9 @@ public class SpaceGame extends Space
      */
     public void addShot(boolean movingUp, int xPosition, int yPosition) {
         addObject(new Shot(movingUp), xPosition, yPosition);
+    }
+    
+    public void setLives(int newLives) {
+        this.lives -= newLives;
     }
 }

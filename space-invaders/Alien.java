@@ -42,7 +42,8 @@ public class Alien extends Actor
      */
     public void act()
     {
-        moveHorizontal();     
+        moveHorizontal();
+        checkShotTouching();
     }
     
     /**
@@ -57,5 +58,11 @@ public class Alien extends Actor
             setLocation(getX(), getY() + movingSpeed); 
         }
             
+    }
+    
+    private void checkShotTouching() {
+        if (isTouching(Shot.class)) {
+            getWorld().removeObject(this);
+        }
     }
 }

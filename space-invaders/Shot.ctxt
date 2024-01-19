@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=Shot
-comment0.text=\n\ Shot\ who\ destroys\ everythig\ possible.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment0.text=\r\n\ Shot\ who\ destroys\ everythig\ possible.\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
 comment1.params=movingUp
 comment1.target=Shot(boolean)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
+comment2.text=\r\n\ Act\ method\ which\ runs\ in\ endless\ loop.\r\n
 comment3.params=
 comment3.target=void\ moveHorizontal()
-comment3.text=\n\ Move\ Shot\ horizontal\ with\ the\ moving\ speed\ initialized.\n
+comment3.text=\r\n\ Move\ Shot\ horizontal\ with\ the\ moving\ speed\ initialized.\r\n
 numComments=4

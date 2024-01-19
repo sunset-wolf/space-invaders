@@ -44,6 +44,7 @@ public class Spaceship extends Actor
         if(isAllowedToInteract) {
             checkKeys();
             actCounter++;
+            checkAlienCollision();
         }
     }
     
@@ -61,12 +62,22 @@ public class Spaceship extends Actor
         
         if(Greenfoot.isKeyDown("Space") && checkShootability()) {
             final SpaceGame world = (SpaceGame) getWorld();
-             world.addShot(true, getX(), getY() - getImage().getHeight()/2);
+            world.addShot(true, getX(), getY() - getImage().getHeight()/2);
         }
     }
     
     /**
-     * Move spaceship vertically.
+     * Check if spaceship is colliding with alien.
+     */
+    private void checkAlienCollision() {
+        if (isTouching(Alien.class)) {
+            SpaceGame spaceGame = new SpaceGame();
+            spaceGame.setLives(1);
+        }
+    }
+    
+    /**
+     * Move spaceship horizontally.
      */
     private void moveVertical(boolean directionIsRight) {
         // Check if the spaceship is at the edge of a side.
