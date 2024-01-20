@@ -15,7 +15,7 @@ public class Alien extends MoveableActor
      * Constructor to initialize the actor.
      */
     public Alien(AlienColour colour) {
-        this.movingSpeed = 2;
+        super(0,2);
         this.colour = colour;
         setAlienImage();
     }
@@ -42,7 +42,7 @@ public class Alien extends MoveableActor
      */
     public void act()
     {
-        moveVertical(movingSpeed);
+        moveWithSpeed();
         checkShotTouching();
     }
         

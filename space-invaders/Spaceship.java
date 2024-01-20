@@ -20,11 +20,14 @@ public class Spaceship extends MoveableActor
     // True if it is touching Alien
     private boolean touchingAlien = false;
     
+    // True if user's last interaction was to move right. 
+    private boolean lastMoveWasRight = true;
+    
     /**
      * Constructor to initialize the actor.
      */
     public Spaceship(boolean isAllowedToInteract) {
-        this.movingSpeed = 5;
+        super(5,0);
         this.isAllowedToInteract = isAllowedToInteract;
         setSpaceshipImage();
     }
@@ -55,20 +58,32 @@ public class Spaceship extends MoveableActor
      * Check the user's interaction with the game.
      */
     private void checkKeys() {
-        if(Greenfoot.isKeyDown("right")) {
-            moveHorizontal(movingSpeed, true);
+        if (Greenfoot.isKeyDown("right")) {
+            checkForHorizontalSpeedUpdate(true);
+            moveWithSpeed();
         }
         
-        if(Greenfoot.isKeyDown("left")) {
-            moveHorizontal(movingSpeed, false);
+        if (Greenfoot.isKeyDown("left")) {
+            checkForHorizontalSpeedUpdate(false);
+            moveWithSpeed();
         }
         
-        if(Greenfoot.isKeyDown("Space") && checkShootability()) {
+        if (Greenfoot.isKeyDown("Space") && checkShootability()) {
             final SpaceGame world = (SpaceGame) getWorld();
-            world.addShot(true, getX(), getY() - getImage().getHeight()/2);
+            world.addShot(true, getX(), getY() - getImage().getHeight() / 2);
         }
     }
     
+    /**
+     * Check if horizontalSpeed has to be updated.
+     */
+    private void checkForHorizontalSpeedUpdate(boolean actualMoveWasRight) {
+        if (lastMoveWasRight != actualMoveWasRight) {
+            horizontalSpeed = -horizontalSpeed;
+            lastMoveWasRight = actualMoveWasRight;
+        }
+    }
+
     /**
      * Check if spaceship is colliding with alien.
      */

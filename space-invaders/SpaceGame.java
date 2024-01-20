@@ -19,7 +19,6 @@ public class SpaceGame extends Space
     public SpaceGame()
     {    
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
-
         addAliens();
         displayLives();
         displayScore(score);

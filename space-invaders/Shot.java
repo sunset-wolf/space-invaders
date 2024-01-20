@@ -12,8 +12,8 @@ public class Shot extends MoveableActor
     private boolean movingUp;
     
     public Shot(boolean movingUp) {
+        super(0,movingUp ? -3 : 3);
         this.movingUp = movingUp;
-        this.movingSpeed = movingUp ? -3 : 3;
     }
     
     /**

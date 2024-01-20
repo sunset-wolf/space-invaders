@@ -1,28 +1,27 @@
 import greenfoot.*;
 
 public class MoveableActor extends Actor {
+    
+    protected int horizontalSpeed;
+    protected int verticalSpeed;
 
-    /**
-     * Move actor vertical with the given moving speed.
-     */
-    protected void moveVertical(int movingSpeed) {
-        setLocation(getX() , getY() + movingSpeed);
+    public MoveableActor(int horizontalSpeed, int verticalSpeed) {
+        this.horizontalSpeed = horizontalSpeed;
+        this.verticalSpeed = verticalSpeed;
     }
     
     /**
      * Move spaceship horizontally.
      */
-    protected void moveHorizontal(int movingSpeed, boolean directionIsRight) {
+    protected void moveWithSpeed() {
         // Check if the spaceship is at the edge of a side.
-        if((directionIsRight && getX() > 295) || !directionIsRight && getX() < 5) {
+        int worldWidth = getWorld().getWidth();
+        if((horizontalSpeed > 0 && getX() > worldWidth - 2) || horizontalSpeed < 0 && getX() < 2) {
             // Move the spaceshipt to the other side.
-            setLocation(300 - getX(), getY());
+            setLocation(worldWidth - getX(), getY() + verticalSpeed);
         }
-        if(directionIsRight) {
-            setLocation(getX() + movingSpeed, getY());  
-        } 
         else {
-            setLocation(getX() - movingSpeed, getY());  
+            setLocation(getX() + horizontalSpeed, getY() + verticalSpeed);
         }
     }
 }
