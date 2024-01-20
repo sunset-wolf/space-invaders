@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.*;
 
 /**
  * SpaceGame where the game is played.
@@ -24,9 +25,10 @@ public class SpaceGame extends Space
         displayScore(score);
     }
     
+    /**
+     * Act class.
+     */
     public void act() {
-        displayLives();
-        displayScore(score);
     }
     
     /**
@@ -49,7 +51,8 @@ public class SpaceGame extends Space
     }
     
     private void displayScore(int score) {
-        showText("Score: " + score, WIDTH/8*6, HEIGHT/15*1);
+        addObject(new TextFlicker("Score: ", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH/10*7, HEIGHT/30*1);
+        addObject(new TextFlicker(String.valueOf(score), TextSizing.MIDDLE, false, true, Color.WHITE), WIDTH/10*9, HEIGHT/30*1);
     }
 
     /**
@@ -67,7 +70,15 @@ public class SpaceGame extends Space
         this.lives += newLives;
     }
     
+    public int getLives() {
+        return lives;
+    }
+    
     public void setScore(int newScore) {
         this.score += newScore;
+    }
+    
+    public int getScore() {
+        return score;
     }
 }

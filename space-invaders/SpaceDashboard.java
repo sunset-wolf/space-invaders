@@ -34,30 +34,29 @@ public class SpaceDashboard extends Space
      * Creates the sidelines with the aliens.
      */
     private void addFlyingAliens() {
+        int counter = 0;
         int[] xPositions = {WIDTH / 10 * 1, WIDTH / 10 * 9};
-        int spaceBetweenEndLines = HEIGHT / 15 * 14 - HEIGHT / 15 * 1;
-        int counter = 1;
-        while(counter < 9) {
-               for (AlienColour alienColour : AlienColour.values()) {
-                   for (int position : xPositions) {
-                int newY = spaceBetweenEndLines / 9 * counter + 20;
-                addObject(new Alien(alienColour), position, newY);
+        
+        while(counter < 12) {
+            for(AlienColour alienColour : AlienColour.values()) {
+                // Add alien on left and right side.
+                for(int position : xPositions) {
+                    addObject(new Alien(alienColour), position, HEIGHT / 15 * (counter + 2));
                 }
                 counter++;
-            } 
+            }   
         }
-    }    
-
+    }
     
     /**
      * Add the text messages.
      */
     private void addTextMessages() {
-        addObject(new TextFlicker("SPACE-INVADERS", TextSizing.BIG, true, Color.GREEN), WIDTH / 2, HEIGHT / 15 * 2);
-        addObject(new TextFlicker("Choose your game", TextSizing.MIDDLE, true, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 3);
-        addObject(new TextFlicker("Level 1", TextSizing.MIDDLE, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 5);
-        addObject(new TextFlicker("Level 2", TextSizing.MIDDLE, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 6);
-        addObject(new TextFlicker("Level 3", TextSizing.MIDDLE, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 7);
+        addObject(new TextFlicker("SPACE-INVADERS", TextSizing.BIG, true, false, Color.GREEN), WIDTH / 2, HEIGHT / 15 * 2);
+        addObject(new TextFlicker("Choose your game", TextSizing.MIDDLE, true, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 3);
+        addObject(new TextFlicker("Level 1", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 5);
+        addObject(new TextFlicker("Level 2", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 6);
+        addObject(new TextFlicker("Level 3", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 7);
     }
     
     /**

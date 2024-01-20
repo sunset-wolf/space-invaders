@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=TextFlicker
-comment1.params=textMessage\ textSizing\ flickerOn\ colour
-comment1.target=TextFlicker(java.lang.String,\ TextSizing,\ boolean,\ greenfoot.Color)
+comment1.params=textMessage\ textSizing\ flickerOn\ isUpdatable\ colour
+comment1.target=TextFlicker(java.lang.String,\ TextSizing,\ boolean,\ boolean,\ greenfoot.Color)
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n

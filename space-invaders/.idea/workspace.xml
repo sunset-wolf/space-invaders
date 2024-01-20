@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8857fd9c-1542-4620-9f8d-cbe24d898a90" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Alien.class" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Alien.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/Alien.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpaceDashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceDashboard.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpaceDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpaceGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceGame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpaceGame.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceGame.ctxt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpaceGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpaceGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spaceship.class" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spaceship.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TextFlicker$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/TextFlicker$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TextFlicker.class" beforeDir="false" afterPath="$PROJECT_DIR$/TextFlicker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TextFlicker.ctxt" beforeDir="false" afterPath="$PROJECT_DIR$/TextFlicker.ctxt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TextFlicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/TextFlicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.greenfoot" beforeDir="false" afterPath="$PROJECT_DIR$/project.greenfoot" afterDir="false" />
     </list>
