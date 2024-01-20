@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.List;
 /**
  * Write a description of class EndLine here.
  * 
@@ -8,12 +8,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EndLine extends Actor
 {
+    public boolean isAtBottom;
+    
+    public EndLine(boolean isAtBottom) {
+        this.isAtBottom = isAtBottom;
+    }
+    
     /**
-     * Act - do whatever the EndLine wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Act method which runs in endless loop.
      */
-    public void act()
-    {
-        // Add your action code here.
+    public void act() {
+        if(isAtBottom) {
+            checkForRespawningActors();
+        }
+    }
+
+    /**
+     * Check if there are actos which have to be respawned.
+     */
+    private void checkForRespawningActors() {
+        List<MoveableActor> actors =  getIntersectingObjects(MoveableActor.class);
+        if(!actors.isEmpty()) {
+            final int worldHeight = getWorld().getHeight();
+            for(MoveableActor singleActor : actors) {
+                singleActor.setLocation(singleActor.getX(), worldHeight / 30 * 3);
+            }
+        }
     }
 }

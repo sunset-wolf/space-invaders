@@ -6,12 +6,7 @@ public class MoveableActor extends Actor {
      * Move actor vertical with the given moving speed.
      */
     protected void moveVertical(int movingSpeed) {
-        final int worldWidth = getWorld().getWidth();
-        if (getX() + 5 >= worldWidth) {
-            setLocation(getX() , getY() + movingSpeed - worldWidth);
-        } else {
-            setLocation(getX(), getY() +  movingSpeed);
-        }
+        setLocation(getX() , getY() + movingSpeed);
     }
     
     /**

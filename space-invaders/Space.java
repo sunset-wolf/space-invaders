@@ -20,6 +20,8 @@ public class Space extends World
     {    
         super(WIDTH, HEIGHT, 1); 
         setBackground();
+        addObject(new EndLine(true), WIDTH / 2, HEIGHT / 15 * 14);
+        addObject(new EndLine(false), WIDTH / 2, HEIGHT / 15 * 1);
     }
 
     /**
