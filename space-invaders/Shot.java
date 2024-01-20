@@ -21,19 +21,9 @@ public class Shot extends MoveableActor
      */
     public void act()
     {
-        moveHorizontal();
-    }
-    
-    /**
-     * Move Shot horizontal with the moving speed initialized.
-     */
-    private void moveHorizontal() {
-        final World world = getWorld();
-        if(movingUp && getY() == 0 || !movingUp && getY() + 1 == getWorld().getHeight()) {
-           world.removeObject(this); 
+        moveWithSpeed();
+        if(hasCollisionWith(Alien.class, 100) || hasCollisionWith(EndLine.class, -10)) {
+            getWorld().removeObject(this);
         }
-        else {
-            setLocation(getX(), getY() + movingSpeed);
-        } 
     }
 }

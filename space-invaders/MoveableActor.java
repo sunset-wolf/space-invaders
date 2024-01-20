@@ -1,9 +1,10 @@
 import greenfoot.*;
+import java.util.List;
 
 public class MoveableActor extends Actor {
-    
     protected int horizontalSpeed;
     protected int verticalSpeed;
+    protected SpaceGame world = (SpaceGame) getWorld();
 
     public MoveableActor(int horizontalSpeed, int verticalSpeed) {
         this.horizontalSpeed = horizontalSpeed;
@@ -23,5 +24,29 @@ public class MoveableActor extends Actor {
         else {
             setLocation(getX() + horizontalSpeed, getY() + verticalSpeed);
         }
+    }
+
+    /**
+     * Remove all intersecting actors of a specific class.
+     * 
+     * @param collisionClass The class of the actors to check for collision.
+     * @param scoreToAdd The score to add to the world.
+     */
+    protected boolean hasCollisionWith(Class collisionClass, int scoreToAdd) {
+        SpaceGame world = (SpaceGame) getWorld();
+        Actor collisionObject = getOneIntersectingObject(collisionClass);
+    
+        if (collisionObject != null) {
+            if(collisionObject instanceof MoveableActor) {
+                // Remove the collided object
+                world.removeObject(collisionObject);
+            }
+            if (scoreToAdd != 0) {
+                // Update the score
+                world.setScore(scoreToAdd);
+            }
+            return true;
+        }
+        return false;
     }
 }

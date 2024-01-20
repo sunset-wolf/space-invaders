@@ -10,6 +10,4 @@ comment2.text=\n\ Set\ the\ image\ for\ the\ alien.\n
 comment3.params=
 comment3.target=void\ act()
 comment3.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
-comment4.params=
-comment4.target=void\ checkShotTouching()
-numComments=5
+numComments=4

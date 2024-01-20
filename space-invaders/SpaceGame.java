@@ -18,16 +18,11 @@ public class SpaceGame extends Space
      */
     public SpaceGame()
     {    
+        //addObject(new CollisionDepartment(), 0, 0);
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
         addAliens();
         displayLives();
         displayScore(score);
-    }
-    
-    /**
-     * Act class.
-     */
-    public void act() {
     }
     
     /**

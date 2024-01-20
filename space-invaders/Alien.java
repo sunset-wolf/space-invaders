@@ -43,14 +43,5 @@ public class Alien extends MoveableActor
     public void act()
     {
         moveWithSpeed();
-        checkShotTouching();
-    }
-        
-    private void checkShotTouching() {
-        if (isTouching(Shot.class)) {
-            final SpaceGame world = (SpaceGame) getWorld();
-            world.setScore(100);
-            getWorld().removeObject(this);
-        }
     }
 }
