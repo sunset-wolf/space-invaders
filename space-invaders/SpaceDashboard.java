@@ -34,19 +34,20 @@ public class SpaceDashboard extends Space
      * Creates the sidelines with the aliens.
      */
     private void addFlyingAliens() {
-        int counter = 0;
         int[] xPositions = {WIDTH / 10 * 1, WIDTH / 10 * 9};
-        
-        while(counter < 15) {
-            for(AlienColour alienColour : AlienColour.values()) {
-                // Add alien on left and right side.
-                for(int position : xPositions) {
-                    addObject(new Alien(alienColour), position, HEIGHT / 15 * (counter + 1));
+        int spaceBetweenEndLines = HEIGHT / 15 * 14 - HEIGHT / 15 * 1;
+        int counter = 1;
+        while(counter < 9) {
+               for (AlienColour alienColour : AlienColour.values()) {
+                   for (int position : xPositions) {
+                int newY = spaceBetweenEndLines / 9 * counter + 20;
+                addObject(new Alien(alienColour), position, newY);
                 }
                 counter++;
-            }   
+            } 
         }
-    }
+    }    
+
     
     /**
      * Add the text messages.

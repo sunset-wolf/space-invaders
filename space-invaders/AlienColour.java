@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public enum AlienColour
 {
+    VIOLETT,
     GREEN,
     WHITE,
-    VIOLETT,
 }

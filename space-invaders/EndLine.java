@@ -31,7 +31,7 @@ public class EndLine extends Actor
         if(!actors.isEmpty()) {
             final int worldHeight = getWorld().getHeight();
             for(MoveableActor singleActor : actors) {
-                singleActor.setLocation(singleActor.getX(), worldHeight / 30 * 3);
+                singleActor.setLocation(singleActor.getX(), worldHeight / 90 * 7);
             }
         }
     }
