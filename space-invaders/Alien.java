@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0
  */
-public class Alien extends Actor
+public class Alien extends MoveableActor
 {
     private int movingSpeed;
     private AlienColour colour;
@@ -42,24 +42,10 @@ public class Alien extends Actor
      */
     public void act()
     {
-        moveHorizontal();
+        moveVertical(movingSpeed);
         checkShotTouching();
     }
-    
-    /**
-     * Move alien horizontal with the moving speed initialized.
-     */
-    private void moveHorizontal() {
-        final int worldHeight = getWorld().getHeight();
-         if(getY() + 5 >= worldHeight) {
-            setLocation(getX(), getY() + movingSpeed - worldHeight);
-        }
-        else {
-            setLocation(getX(), getY() + movingSpeed); 
-        }
-            
-    }
-    
+        
     private void checkShotTouching() {
         if (isTouching(Shot.class)) {
             final SpaceGame world = (SpaceGame) getWorld();

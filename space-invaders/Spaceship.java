@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0
  */
-public class Spaceship extends Actor
+public class Spaceship extends MoveableActor
 {
     // The speed a spaceship can move.
     private int movingSpeed;
@@ -53,11 +53,11 @@ public class Spaceship extends Actor
      */
     private void checkKeys() {
         if(Greenfoot.isKeyDown("right")) {
-            moveVertical(true);
+            moveHorizontal(movingSpeed, true);
         }
         
         if(Greenfoot.isKeyDown("left")) {
-            moveVertical(false);
+            moveHorizontal(movingSpeed, false);
         }
         
         if(Greenfoot.isKeyDown("Space") && checkShootability()) {
@@ -77,23 +77,6 @@ public class Spaceship extends Actor
             world.setLives(-1);
         } else {
             touching = false;
-        }
-    }
-    
-    /**
-     * Move spaceship horizontally.
-     */
-    private void moveVertical(boolean directionIsRight) {
-        // Check if the spaceship is at the edge of a side.
-        if((directionIsRight && getX() > 295) || !directionIsRight && getX() < 5) {
-            // Move the spaceshipt to the other side.
-            setLocation(300 - getX(), getY());
-        }
-        if(directionIsRight) {
-            setLocation(getX() + movingSpeed, getY());  
-        } 
-        else {
-            setLocation(getX() - movingSpeed, getY());  
         }
     }
     

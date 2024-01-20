@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=MoveableActor
+comment1.params=movingSpeed
+comment1.target=void\ moveVertical(int)
+comment1.text=\n\ Move\ actor\ vertical\ with\ the\ given\ moving\ speed.\n
+comment2.params=movingSpeed\ directionIsRight
+comment2.target=void\ moveHorizontal(int,\ boolean)
+comment2.text=\n\ Move\ spaceship\ horizontally.\n
+numComments=3

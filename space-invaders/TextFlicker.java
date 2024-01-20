@@ -10,6 +10,8 @@ public class TextFlicker extends Actor {
     private boolean textSmall = true;
     private Color colour;
     private TextSizing textSizing;
+    private GreenfootImage smallImage;
+    private GreenfootImage bugImage;
 
     public TextFlicker(String textMessage, TextSizing textSizing, boolean flickerOn, Color colour) {
         this.textMessage = textMessage;

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0
  */
-public class Shot extends Actor
+public class Shot extends MoveableActor
 {
     private int movingSpeed = -3;
     private boolean movingUp;
