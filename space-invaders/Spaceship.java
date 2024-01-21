@@ -88,12 +88,10 @@ public class Spaceship extends MoveableActor
      * Check if spaceship is colliding with alien.
      */
     private void checkAlienCollision() {
-        if (isTouching(Alien.class) && touchingAlien == false) {
-            touchingAlien = true;
+        if(hasCollisionWith(Alien.class, true, -90)) {
             final SpaceGame world = (SpaceGame) getWorld();
             world.setLives(-1);
-        } else {
-            touchingAlien = false;
+            world.removeObject(this);
         }
     }
     

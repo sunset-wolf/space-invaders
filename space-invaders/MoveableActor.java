@@ -30,14 +30,15 @@ public class MoveableActor extends Actor {
      * Remove all intersecting actors of a specific class.
      * 
      * @param collisionClass The class of the actors to check for collision.
+     * @param collisionObjectToRemove If collision object should be removed.
      * @param scoreToAdd The score to add to the world.
      */
-    protected boolean hasCollisionWith(Class collisionClass, int scoreToAdd) {
+    protected boolean hasCollisionWith(Class collisionClass, boolean collisionObjectToRemove, int scoreToAdd) {
         SpaceGame world = (SpaceGame) getWorld();
         Actor collisionObject = getOneIntersectingObject(collisionClass);
     
         if (collisionObject != null) {
-            if(collisionObject instanceof MoveableActor) {
+            if(collisionObject instanceof Actor && collisionObjectToRemove) {
                 // Remove the collided object
                 world.removeObject(collisionObject);
             }

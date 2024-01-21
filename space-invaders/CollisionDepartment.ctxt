@@ -2,8 +2,9 @@
 comment0.target=CollisionDepartment
 comment0.text=\n\ Write\ a\ description\ of\ class\ CollisionDepartment\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
-comment1.target=void\ act()
+comment1.target=void\ review()
 comment1.text=\n\ Act\ -\ do\ whatever\ the\ CollisionDepartment\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
 comment2.params=collisionClass
 comment2.target=void\ checkForCollision(java.lang.Class)
+comment2.text=private\ void\ checkForCollision\ (Class\ collisionClass)\ {\n\ \ \ \ \ \ \ \ Actor\ collisionObject\ \=\ \ getOneIntersectingObject(collisionClass);\n\ \ \ \ if\ (collisionObject\ \!\=\ null)\ {\n\ \ \ \ \ \ \ \ if(collisionObject\ instanceof\ MoveableActor)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ //\ Remove\ the\ collided\ object\n\ \ \ \ \ \ \ \ \ \ \ \ world.removeObject(collisionObject);\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (5\ \!\=\ 0)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Update\ the\ score\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ world.setScore(-5);\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ //\ Remove\ the\ shot\ object\ only\ if\ it\ is\ still\ in\ the\ world\n\ \ \ \ \ \ \ \ //return\ true;\n\ \ \ \ \ \ \ \ //removeMyObject();\n\ \ \ \ }\n\ \ \ \ //return\ false;\n}
 numComments=3

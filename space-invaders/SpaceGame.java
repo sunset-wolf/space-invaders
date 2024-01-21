@@ -18,10 +18,17 @@ public class SpaceGame extends Space
      */
     public SpaceGame()
     {    
-        addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
+        addSpaceship();
         addAliens();
         displayLives();
         displayScore(score);
+    }
+    
+    /**
+     * Creates a new Spaceship
+     */
+    private void addSpaceship() {
+        addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
     }
     
     /**
@@ -49,7 +56,7 @@ public class SpaceGame extends Space
             backToDashboard("Level succesfully finished", true);
         }
         
-        if(score < -100) {
+        if(score < -150 || lives <= 0) {
             backToDashboard("Failed to finish level", false);
         }
     }
@@ -92,8 +99,19 @@ public class SpaceGame extends Space
         addObject(new Shot(movingUp), xPosition, yPosition);
     }
     
+    /**
+     * Set lives variable new
+     * 
+     * @param newLives The amount.
+     */
     public void setLives(int newLives) {
         this.lives += newLives;
+        
+        // Remove existing Spaceship objects.
+        removeObjects(getObjects(Spaceship.class));
+        displayLives();
+        Greenfoot.delay(25);
+        addSpaceship();    
     }
     
     public int getLives() {

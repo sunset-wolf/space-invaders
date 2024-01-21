@@ -22,7 +22,7 @@ public class Shot extends MoveableActor
     public void act()
     {
         moveWithSpeed();
-        if(hasCollisionWith(Alien.class, 100) || hasCollisionWith(EndLine.class, -10)) {
+        if(hasCollisionWith(Alien.class, true, 100) || hasCollisionWith(EndLine.class, false, -10)) {
             getWorld().removeObject(this);
         }
     }
