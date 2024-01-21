@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Alien extends MoveableActor
 {
     private int movingSpeed;
+    private int lives;
     private AlienColour colour;
     
     /**
@@ -17,6 +18,13 @@ public class Alien extends MoveableActor
     public Alien(AlienColour colour) {
         super(0,2);
         this.colour = colour;
+        setAlienImage();
+    }
+    
+    public Alien(int lives) {
+        super(0,2);
+        this.colour = colour;
+        this.lives = lives;
         setAlienImage();
     }
     
@@ -35,6 +43,10 @@ public class Alien extends MoveableActor
                 setImage("alien-violett.png");
                 break; 
         }
+    }
+    
+    public void updateAlienLive(int liveToAdd) {
+        lives = lives + liveToAdd;
     }
 
     /**
