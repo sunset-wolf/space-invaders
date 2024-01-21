@@ -18,7 +18,6 @@ public class SpaceGame extends Space
      */
     public SpaceGame()
     {    
-        //addObject(new CollisionDepartment(), 0, 0);
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
         addAliens();
         displayLives();
@@ -33,6 +32,39 @@ public class SpaceGame extends Space
         for (int i = 1; i < alienCount+1; i++) {
             addObject(new Alien(AlienColour.GREEN), WIDTH / alienCount*i - (WIDTH /alienCount)/2, HEIGHT/2);
         }
+    }
+    
+    /**
+     * Act method which runs in endless loop.
+     */
+    public void act() {
+        checkForEnd();
+    }
+    
+    /**
+     * Check if level game is finished.
+     */
+    private void checkForEnd() {
+        if(getObjects(Alien.class).isEmpty()) {
+            backToDashboard("Level succesfully finished", true);
+        }
+        
+        if(score < -100) {
+            backToDashboard("Failed to finish level", false);
+        }
+    }
+    
+    /**
+     * Go back to the dashboard and display final message.
+     * 
+     * @param endMessage The final message.
+     * @param levelSuccessfullyFinished If userfinished level.
+     */
+    private void backToDashboard(String endMessage, boolean levelSuccessfullyFinished) {
+        Color displayColour = levelSuccessfullyFinished ? Color.GREEN : Color.RED;
+        addObject(new TextFlicker(endMessage, TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 2);
+        Greenfoot.delay(100);
+        Greenfoot.setWorld(new SpaceDashboard());
     }
     
     /**
