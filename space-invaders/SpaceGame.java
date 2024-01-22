@@ -12,20 +12,59 @@ public class SpaceGame extends Space
     // The amount of lives for the user;
     private int lives = 3;
     private int score = 0;
+    private SpaceGameLevel level;
     
     /**
      * Constructor for objects of class SpaceGame.
      */
-    public SpaceGame()
+    public SpaceGame(SpaceGameLevel level)
     {    
         addSpaceship();
-        addAliens();
+        this.level = level;
+        createLevel();
         displayLives();
         displayScore(score);
     }
+
+    /**
+     * Creates the level
+     */
+    private void createLevel() {
+        switch(level) {
+            case BEGINNER:
+                for(int x = 0; x < 3; x++) {
+                    for (int y = 0; y < 3; y++) {
+                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                    }                
+                }
+                break;
+            case MEDIUM:
+                for(int x = 0; x < 3; x++) {
+                    for (int y = 0; y < 3; y++) {
+                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                    }                
+                }
+                break;
+            case HARD:
+                for(int x = 0; x < 3; x++) {
+                    for (int y = 0; y < 3; y++) {
+                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                    }                
+                }
+                break;
+            case PRO:
+                for(int x = 0; x < 3; x++) {
+                    for (int y = 0; y < 3; y++) {
+                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                    }                
+                }
+                break;
+        }
+        
+    }
     
     /**
-     * Creates a new Spaceship
+     * Creates a new Spaceship.
      */
     private void addSpaceship() {
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);

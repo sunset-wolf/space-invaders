@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceDashboard extends Space
 {
-    private static final int LEVELCOUNT = 3;
+    private static final int LEVELCOUNT = 4;
     private int selectedLevel = 1;
     private boolean keyPressed = false;
     private boolean keyDown = false;
@@ -57,6 +57,7 @@ public class SpaceDashboard extends Space
         addObject(new TextFlicker("Level 1", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 5);
         addObject(new TextFlicker("Level 2", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 6);
         addObject(new TextFlicker("Level 3", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 7);
+        addObject(new TextFlicker("Level 4", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH / 2, HEIGHT / 15 * 8);
     }
     
     /**
@@ -118,9 +119,17 @@ public class SpaceDashboard extends Space
             if ((!Greenfoot.isKeyDown("enter")) && keyDown == true) {
                 // Define which level to start
                 if (selectedLevel == 1) {
-                    Greenfoot.setWorld(new SpaceGame());
+                    Greenfoot.setWorld(new SpaceGame(SpaceGameLevel.BEGINNER));
                 }
-                // Add more levels
+                else if(selectedLevel == 2) {
+                    Greenfoot.setWorld(new SpaceGame(SpaceGameLevel.MEDIUM));
+                }
+                else if(selectedLevel == 3) {
+                    Greenfoot.setWorld(new SpaceGame(SpaceGameLevel.HARD));
+                }
+                else if(selectedLevel == 4) {
+                    Greenfoot.setWorld(new SpaceGame(SpaceGameLevel.PRO));
+                }
             }
         }
     }
