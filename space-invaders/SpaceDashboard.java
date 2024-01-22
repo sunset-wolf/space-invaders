@@ -85,24 +85,24 @@ public class SpaceDashboard extends Space
             int selectorX = selector.getX();
             int selectorY = selector.getY();
             
-            boolean nodown = false;
-            boolean noup = false;
+            boolean noDown = false;
+            boolean noUp = false;
             
             if (selectedLevel <= 1) {
-                noup = true;
+                noUp = true;
             } else if (selectedLevel >= LEVELCOUNT) {
-                nodown = true;
+                noDown = true;
             } else {
-                noup = false;
-                nodown = false;
+                noUp = false;
+                noDown = false;
             }
             
-            if (!keyPressed && !nodown && Greenfoot.isKeyDown("down")) {
+            if (!keyPressed && !noDown && Greenfoot.isKeyDown("down")) {
                 selector.setLocation(selectorX,selectorY+HEIGHT/15);
                 selectedLevel += 1;
                 keyPressed = true;
             }
-            if (!keyPressed && !noup && Greenfoot.isKeyDown("up")) {
+            if (!keyPressed && !noUp && Greenfoot.isKeyDown("up")) {
                 selector.setLocation(selectorX,selectorY-HEIGHT/15);
                 selectedLevel -= 1;
                 keyPressed = true;
