@@ -41,7 +41,7 @@ public class SpaceDashboard extends Space
             for(AlienColour alienColour : AlienColour.values()) {
                 // Add alien on left and right side.
                 for(int position : xPositions) {
-                    addObject(new Alien(alienColour), position, HEIGHT / 15 * (counter + 2));
+                    addObject(new Alien(alienColour, 0), position, HEIGHT / 15 * (counter + 2));
                 }
                 counter++;
             }   

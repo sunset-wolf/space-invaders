@@ -39,12 +39,15 @@ public class MoveableActor extends Actor {
     
         if (collisionObject != null) {
             if(collisionObject instanceof Actor && collisionObjectToRemove) {
-                if(isCollisionBetweenSpaceshipAndAlien(collisionObject)) {
-                    handleCaseSpaceshipAlienCollision(collisionObject);
+                if(this instanceof Spaceship && collisionObject instanceof Alien ) {
+                handleCaseSpaceshipAlienCollision((Alien) collisionObject);
+                }
+                else if(this instanceof Shot && collisionObject instanceof Alien) {
+                     handleCaseShotAlienCollision((Alien) collisionObject);
                 }
                 else {
-                // Remove the collided object.
-                world.removeObject(collisionObject);  
+                    // Remove the collided object.
+                    world.removeObject(collisionObject); 
                 }
             }
             if (scoreToAdd != 0) {
@@ -55,33 +58,28 @@ public class MoveableActor extends Actor {
         }
         return false;
     }
-    
-    /**
-     * If collision happenend between the spaceship and an alien
-     * 
-     * @param collisionObject The collided object.
-     */
-    private boolean isCollisionBetweenSpaceshipAndAlien(Actor collisionObject) {
-        if(this instanceof Spaceship && collisionObject instanceof Alien) {
-            return true;
-        }
-        return false;
-    }
 
     /**
      * Handle the case between the spaceship and an alien collision.
      * 
      * @param collisionObject The collided object.
      */    
-    private void handleCaseSpaceshipAlienCollision(Actor collisionObject) {
-        if(this instanceof Spaceship && collisionObject instanceof Alien) {
-            boolean positionOccupied = false;
-            while(!positionOccupied) {
-                collisionObject.setLocation(collisionObject.getX(), collisionObject.getY() - 100 - Greenfoot.getRandomNumber(200));
-                if(getOneObjectAtOffset(collisionObject.getX(), collisionObject.getY(), null) == null) {
-                    positionOccupied = true;
-                }
+    private void handleCaseSpaceshipAlienCollision(Alien collisionObject) {
+        boolean positionOccupied = false;
+        while(!positionOccupied) {
+            collisionObject.setLocation(collisionObject.getX(), collisionObject.getY() - 100 - Greenfoot.getRandomNumber(200));
+            if(getOneObjectAtOffset(collisionObject.getX(), collisionObject.getY(), null) == null) {
+                positionOccupied = true;
+            }
             } 
-        }
+    }
+    
+    /**
+     * Handle the case between the shot and an alien collision.
+     * 
+     * @param collisionObject The collided object.
+     */    
+    private void handleCaseShotAlienCollision(Alien collisionObject) {
+        collisionObject.updateAlienLives(-1);
     }
 }

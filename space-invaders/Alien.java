@@ -15,13 +15,7 @@ public class Alien extends MoveableActor
     /**
      * Constructor to initialize the actor.
      */
-    public Alien(AlienColour colour) {
-        super(0,2);
-        this.colour = colour;
-        setAlienImage();
-    }
-    
-    public Alien(int lives) {
+    public Alien(AlienColour colour, int lives) {
         super(0,2);
         this.colour = colour;
         this.lives = lives;
@@ -45,8 +39,21 @@ public class Alien extends MoveableActor
         }
     }
     
-    public void updateAlienLive(int liveToAdd) {
+    /**
+     * Update the live score of the alien.
+     */
+    public void updateAlienLives(int liveToAdd) {
         lives = lives + liveToAdd;
+        checkLives();
+    }
+    
+    /**
+     * Check if alien has still lives.
+     */
+    private void checkLives() {
+        if(lives <= 0) {
+            getWorld().removeObject(this);
+        }
     }
 
     /**

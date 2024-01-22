@@ -37,7 +37,7 @@ public class SpaceGame extends Space
     private void addAliens() {
         int alienCount = 3;
         for (int i = 1; i < alienCount+1; i++) {
-            addObject(new Alien(AlienColour.GREEN), WIDTH / alienCount*i - (WIDTH /alienCount)/2, HEIGHT/2);
+            addObject(new Alien(AlienColour.GREEN, 2), WIDTH / alienCount*i - (WIDTH /alienCount)/2, HEIGHT/2);
         }
     }
     
