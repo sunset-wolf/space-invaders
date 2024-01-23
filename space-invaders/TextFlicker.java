@@ -8,31 +8,31 @@ import greenfoot.*;
  */
 
 public class TextFlicker extends Actor {
-    // This is the text displayed
+    // This is the text displayed.
     private String textMessage;
     
-    // If the flicker is on or off
+    // If the flicker is on or off.
     private final boolean flickerOn;
     
-    // If the flicker can update its message dynamically
+    // If the flicker can update its message dynamically.
     private final boolean isUpdatable;
 
-    // The size of the small text
-    private int smallTextSize;
+    // The image of the small text.
+    private GreenfootImage smallImage;
     
-    // The size of the big text
-    private int bigTextSize;
+    // The image of the big text.
+    private GreenfootImage bigImage;
     
-    // Counter for flicker
+    // Counter for flicker.
     private int count = 0;
     
-    // If the text is small or big
+    // If the text is small or big.
     private boolean textSmall = true;
     
-    // The color of the text
+    // The color of the text.
     private Color colour;
     
-    // The soze of the text
+    // The size of the text.
     private TextSizing textSizing;
 
     public TextFlicker(String textMessage, TextSizing textSizing, boolean flickerOn, boolean isUpdatable, Color colour) {
@@ -41,8 +41,8 @@ public class TextFlicker extends Actor {
         this.flickerOn = flickerOn;
         this.isUpdatable = isUpdatable;
         this.colour = colour;
-        defineTextSizes();
-        setImage(createTextImage());
+        createTextImages();
+        setImage(smallImage);
     }
     
     /**
@@ -51,8 +51,10 @@ public class TextFlicker extends Actor {
     public void act() {
         if (flickerOn) {
             if(count % 25 == 0) {
-                setImage(createTextImage());
-                textSmall = !textSmall;   
+                // Check which image should be displayed.
+                GreenfootImage imageToDisplay = textSmall ? smallImage : bigImage;
+                setImage(imageToDisplay);
+                textSmall = !textSmall;
             }
             count++;
             checkForCounterReset();
@@ -61,7 +63,8 @@ public class TextFlicker extends Actor {
         if (isUpdatable) {
             final SpaceGame world = (SpaceGame) getWorld();
             textMessage = String.valueOf(world.getScore());
-            setImage(createTextImage());
+            createTextImages();
+            setImage(smallImage);
         }
     }
     
@@ -73,29 +76,28 @@ public class TextFlicker extends Actor {
     }
 
     /**
-     * Create the image of the text.
+     * Create the two images of the text.
      */
-    private GreenfootImage createTextImage() {
-        int textSize = textSmall ? smallTextSize : bigTextSize;
-        return new GreenfootImage(textMessage, textSize, colour, null);
+    private void createTextImages() {
+        int textSize = getTextSize();
+        smallImage = new GreenfootImage(textMessage, textSize, colour, null);
+        // + 4 is the difference between the text sizes.
+        bigImage = new GreenfootImage(textMessage, textSize + 4, colour, null);
     }
 
     /**
      * Define the text size.
      */
-    private void defineTextSizes() {
-        int differenceOfSize = 4;
+    private int getTextSize() {
         switch (textSizing) {
             case SMALL:
-                smallTextSize = 16;
-                break;
+                return 16;
             case MIDDLE:
-                smallTextSize = 19;
-                break;
+                return 19;
             case BIG:
-                smallTextSize = 22;
-                break;
+                return 22;
+            default:
+                return 19;
         }
-        bigTextSize = smallTextSize + differenceOfSize;
     }
 }
