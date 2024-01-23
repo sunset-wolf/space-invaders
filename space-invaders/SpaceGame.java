@@ -32,45 +32,53 @@ public class SpaceGame extends Space
     private void createLevel() {
         switch(level) {
             case BEGINNER:
-                for(int x = 0; x < 3; x++) {
-                    for (int y = 0; y < 3; y++) {
-                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                int rows_beginner = 3;
+                int columns_beginner = 3;
+                for(int x = 0; x < rows_beginner; x++) {
+                    for (int y = 0; y < columns_beginner; y++) {
+                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_beginner+1) * (x + 1), HEIGHT / 15 * (y + 1));
                     }                
                 }
                 break;
             case MEDIUM:
-                for(int x = 0; x < 4; x++) {
-                    for (int y = 0; y < 4; y++) {
+                int rows_medium = 4;
+                int columns_medium = 4;
+                for(int x = 0; x < rows_medium; x++) {
+                    for (int y = 0; y < columns_medium; y++) {
                         if(x % 2 == 0) {
-                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 5 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_medium+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else {
-                            addObject(new Alien(AlienColour.VIOLETT, 1), WIDTH / 5 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.VIOLETT, 2), WIDTH / (rows_medium+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         }
                     }               
                 }
                 break;
             case HARD:
-                for(int x = 0; x < 5; x++) {
-                    for (int y = 0; y < 5; y++) {
+                int rows_hard = 5;
+                int columns_hard = 5;
+                for(int x = 0; x < rows_hard; x++) {
+                    for (int y = 0; y < columns_hard; y++) {
                         if(x % 3 == 0) {
-                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 6 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else if(y % 2 == 0) {
-                            addObject(new Alien(AlienColour.VIOLETT, 1), WIDTH / 6 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.VIOLETT, 2), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else {
-                            addObject(new Alien(AlienColour.WHITE, 1), WIDTH / 6 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.WHITE, 3), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         }
                     }                
                 }
                 break;
             case PRO:
-                for(int x = 0; x < 7; x++) {
-                    for (int y = 0; y < 7; y++) {
-                        if(y % 3 == 0) {
-                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                int rows_pro = 7;
+                int columns_pro = 7;
+                for(int x = 0; x < rows_pro; x++) {
+                    for (int y = 0; y < columns_pro; y++) {
+                        if (y % 3 == 0) {
+                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else if(x % 2 == 0) {
-                            addObject(new Alien(AlienColour.VIOLETT, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.VIOLETT, 2), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else {
-                            addObject(new Alien(AlienColour.WHITE, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.WHITE, 3), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         }
                     }                
                 }
