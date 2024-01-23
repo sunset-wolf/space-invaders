@@ -26,11 +26,10 @@ public class CollisionDepartment extends Actor
                  checkForCollision(EndLine.class);
             }
         }
-        
     }
     
     private void checkForCollision (Class collisionClass) {
-        Actor collisionObject = getOneIntersectingObject(collisionClass);
+    Actor collisionObject = getOneIntersectingObject(collisionClass);
     if (collisionObject != null) {
         if(collisionObject instanceof MoveableActor) {
             // Remove the collided object

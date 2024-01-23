@@ -135,7 +135,10 @@ public class SpaceGame extends Space
      */
     private void backToDashboard(String endMessage, boolean levelSuccessfullyFinished) {
         Color displayColour = levelSuccessfullyFinished ? Color.GREEN : Color.RED;
-        addObject(new TextFlicker(endMessage, TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 2);
+        new Highscore(score);
+        addObject(new TextFlicker(endMessage, TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 8*3);
+        addObject(new TextFlicker("Your score: " + score, TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 8*4);
+        addObject(new TextFlicker("Highscore: " + Highscore.getHighscore(), TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 8*5);
         Greenfoot.delay(100);
         Greenfoot.setWorld(new SpaceDashboard());
     }
