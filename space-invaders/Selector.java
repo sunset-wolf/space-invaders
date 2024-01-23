@@ -8,5 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Selector extends Actor
 {
-    
+    public Selector() {
+        GreenfootImage image = getImage();
+        image.scale(image.getWidth(), image.getHeight());      
+        setImage(image);
+    }
 }
