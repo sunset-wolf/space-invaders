@@ -39,23 +39,39 @@ public class SpaceGame extends Space
                 }
                 break;
             case MEDIUM:
-                for(int x = 0; x < 7; x++) {
+                for(int x = 0; x < 4; x++) {
                     for (int y = 0; y < 4; y++) {
-                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
-                    }                
+                        if(x % 2 == 0) {
+                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 5 * (x + 1), HEIGHT / 15 * (y + 1));
+                        } else {
+                            addObject(new Alien(AlienColour.VIOLETT, 1), WIDTH / 5 * (x + 1), HEIGHT / 15 * (y + 1));
+                        }
+                    }               
                 }
                 break;
             case HARD:
-                for(int x = 0; x < 3; x++) {
-                    for (int y = 0; y < 3; y++) {
-                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                for(int x = 0; x < 5; x++) {
+                    for (int y = 0; y < 5; y++) {
+                        if(x % 3 == 0) {
+                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 6 * (x + 1), HEIGHT / 15 * (y + 1));
+                        } else if(y % 2 == 0) {
+                            addObject(new Alien(AlienColour.VIOLETT, 1), WIDTH / 6 * (x + 1), HEIGHT / 15 * (y + 1));
+                        } else {
+                            addObject(new Alien(AlienColour.WHITE, 1), WIDTH / 6 * (x + 1), HEIGHT / 15 * (y + 1));
+                        }
                     }                
                 }
                 break;
             case PRO:
-                for(int x = 0; x < 3; x++) {
-                    for (int y = 0; y < 3; y++) {
-                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                for(int x = 0; x < 7; x++) {
+                    for (int y = 0; y < 7; y++) {
+                        if(y % 3 == 0) {
+                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                        } else if(x % 2 == 0) {
+                            addObject(new Alien(AlienColour.VIOLETT, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                        } else {
+                            addObject(new Alien(AlienColour.WHITE, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                        }
                     }                
                 }
                 break;
