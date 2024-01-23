@@ -91,6 +91,7 @@ public class Spaceship extends MoveableActor
         if(hasCollisionWith(Alien.class, true, -50)) {
             final SpaceGame world = (SpaceGame) getWorld();
             world.setLives(-1);
+            Greenfoot.playSound("User-Death.mp3");
             world.removeObject(this);
         }
     }

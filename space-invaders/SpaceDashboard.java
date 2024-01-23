@@ -25,6 +25,7 @@ public class SpaceDashboard extends Space
      */
     public SpaceDashboard()
     {    
+        Greenfoot.playSound("Intro.mp3");
         addFlyingAliens();
         addTextMessages();
         addSelector();

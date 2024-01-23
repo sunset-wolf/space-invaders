@@ -20,6 +20,7 @@ public class Shot extends MoveableActor
     public Shot(boolean movingUp) {
         super(0,movingUp ? -3 : 3);
         this.movingUp = movingUp;
+        Greenfoot.playSound("Shot.mp3");
     }
     
     /**

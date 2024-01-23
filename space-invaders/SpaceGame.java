@@ -119,10 +119,12 @@ public class SpaceGame extends Space
      */
     private void checkForEnd() {
         if(getObjects(Alien.class).isEmpty()) {
+            Greenfoot.playSound("Win.mp3");
             backToDashboard("Level succesfully finished", true);
         }
         
         if(score < -150 || lives <= 0) {
+            Greenfoot.playSound("Game-Over.mp3");
             backToDashboard("Failed to finish level", false);
         }
     }

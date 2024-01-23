@@ -63,6 +63,7 @@ public class Alien extends MoveableActor
      */
     private void checkLives() {
         if(lives <= 0) {
+            Greenfoot.playSound("Alien-Death.mp3");
             getWorld().removeObject(this);
         }
     }
