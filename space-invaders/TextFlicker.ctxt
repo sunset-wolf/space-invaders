@@ -1,18 +1,18 @@
 #BlueJ class context
 comment0.target=TextFlicker
-comment0.text=\r\n\ In\ this\ class\ the\ flicker\ on\ the\ startscreen\ will\ happen\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
+comment0.text=\n\ In\ this\ class\ the\ flicker\ on\ the\ startscreen\ will\ happen\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
 comment1.params=textMessage\ textSizing\ flickerOn\ isUpdatable\ colour
 comment1.target=TextFlicker(java.lang.String,\ TextSizing,\ boolean,\ boolean,\ greenfoot.Color)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\r\n\ Act\ method\ which\ runs\ in\ endless\ loop.\r\n
+comment2.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
 comment3.params=
 comment3.target=void\ checkForCounterReset()
-comment3.text=\r\n\ Check\ if\ counter\ can\ be\ resetted.\r\n
+comment3.text=\n\ Check\ if\ counter\ can\ be\ resetted.\n
 comment4.params=
 comment4.target=greenfoot.GreenfootImage\ createTextImage()
-comment4.text=\r\n\ Create\ the\ image\ of\ the\ text.\r\n
+comment4.text=\n\ Create\ the\ image\ of\ the\ text.\n
 comment5.params=
 comment5.target=void\ defineTextSizes()
-comment5.text=\r\n\ Define\ the\ text\ size.\r\n
+comment5.text=\n\ Define\ the\ text\ size.\n
 numComments=6

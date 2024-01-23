@@ -43,7 +43,7 @@ public class SpaceGame extends Space
                 int columns_beginner = 3;
                 for(int x = 0; x < rows_beginner; x++) {
                     for (int y = 0; y < columns_beginner; y++) {
-                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_beginner+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                        addObject(new Alien(AlienColour.GREEN), WIDTH / (rows_beginner+1) * (x + 1), HEIGHT / 15 * (y + 1));
                     }                
                 }
                 break;
@@ -53,9 +53,9 @@ public class SpaceGame extends Space
                 for(int x = 0; x < rows_medium; x++) {
                     for (int y = 0; y < columns_medium; y++) {
                         if(x % 2 == 0) {
-                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_medium+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.GREEN), WIDTH / (rows_medium+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else {
-                            addObject(new Alien(AlienColour.VIOLETT, 2), WIDTH / (rows_medium+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.VIOLETT), WIDTH / (rows_medium+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         }
                     }               
                 }
@@ -66,11 +66,11 @@ public class SpaceGame extends Space
                 for(int x = 0; x < rows_hard; x++) {
                     for (int y = 0; y < columns_hard; y++) {
                         if(x % 3 == 0) {
-                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.GREEN), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else if(y % 2 == 0) {
-                            addObject(new Alien(AlienColour.VIOLETT, 2), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.VIOLETT), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else {
-                            addObject(new Alien(AlienColour.WHITE, 3), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.WHITE), WIDTH / (rows_hard+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         }
                     }                
                 }
@@ -81,11 +81,11 @@ public class SpaceGame extends Space
                 for(int x = 0; x < rows_pro; x++) {
                     for (int y = 0; y < columns_pro; y++) {
                         if (y % 3 == 0) {
-                            addObject(new Alien(AlienColour.GREEN, 1), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.GREEN), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else if(x % 2 == 0) {
-                            addObject(new Alien(AlienColour.VIOLETT, 2), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.VIOLETT), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         } else {
-                            addObject(new Alien(AlienColour.WHITE, 3), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
+                            addObject(new Alien(AlienColour.WHITE), WIDTH / (rows_pro+1) * (x + 1), HEIGHT / 15 * (y + 1));
                         }
                     }                
                 }
@@ -98,16 +98,6 @@ public class SpaceGame extends Space
      */
     private void addSpaceship() {
         addObject(new Spaceship(true), WIDTH/2, HEIGHT/8*7);
-    }
-    
-    /**
-     * Add aliens to the game.
-     */
-    private void addAliens() {
-        int alienCount = 3;
-        for (int i = 1; i < alienCount+1; i++) {
-            addObject(new Alien(AlienColour.GREEN, 2), WIDTH / alienCount*i - (WIDTH /alienCount)/2, HEIGHT/2);
-        }
     }
     
     /**
@@ -158,7 +148,10 @@ public class SpaceGame extends Space
             addObject(new Spaceship(false), WIDTH/10*(x+1), HEIGHT/26*1);
         }
     }
-    
+
+     /**
+     * Display the score of the level.
+     */
     private void displayScore(int score) {
         addObject(new TextFlicker("Score: ", TextSizing.MIDDLE, false, false, Color.WHITE), WIDTH/10*7, HEIGHT/30*1);
         addObject(new TextFlicker(String.valueOf(score), TextSizing.MIDDLE, false, true, Color.WHITE), WIDTH/10*9, HEIGHT/30*1);
@@ -191,21 +184,21 @@ public class SpaceGame extends Space
     }
     
     /**
-     * Return the lives
+     * Return the lives.
      */
     public int getLives() {
         return lives;
     }
     
     /**
-     * Updates the score
+     * Updates the score.
      */
     public void setScore(int newScore) {
         this.score += newScore;
     }
     
     /**
-     * Returns the score
+     * Returns the score.
      */
     public int getScore() {
         return score;

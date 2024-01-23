@@ -26,25 +26,27 @@ public class Alien extends MoveableActor
     /**
      * Constructor to initialize the actor.
      */
-    public Alien(AlienColour colour, int lives) {
+    public Alien(AlienColour colour) {
         super(0,2);
         this.colour = colour;
-        this.lives = lives;
-        setAlienImage();
+        setAlienSpecifications();
     }
     
     /**
      * Set the image for the alien.
      */
-    private void setAlienImage() {
+    private void setAlienSpecifications() {
         switch(colour) {
             case GREEN:
+                lives = 1;
                 setImage("alien-green.png");
                 break;
             case WHITE:
+                lives = 3;
                 setImage("alien-white.png");
                 break;
             case VIOLETT:
+                lives = 2;
                 setImage("alien-violett.png");
                 break; 
         }
