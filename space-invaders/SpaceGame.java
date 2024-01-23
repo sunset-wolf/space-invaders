@@ -18,6 +18,8 @@ public class SpaceGame extends Space
     // Variable for the level of the game
     private SpaceGameLevel level;
     
+    // Game sound
+    GreenfootSound sound = new GreenfootSound("Music.mp3");
     /**
      * Constructor for objects of class SpaceGame.
      */
@@ -28,6 +30,7 @@ public class SpaceGame extends Space
         createLevel();
         displayLives();
         displayScore(score);
+        sound.play();
     }
 
     /**
@@ -119,11 +122,13 @@ public class SpaceGame extends Space
      */
     private void checkForEnd() {
         if(getObjects(Alien.class).isEmpty()) {
+            sound.stop();
             Greenfoot.playSound("Win.mp3");
             backToDashboard("Level succesfully finished", true);
         }
         
         if(score < -150 || lives <= 0) {
+            sound.stop();
             Greenfoot.playSound("Game-Over.mp3");
             backToDashboard("Failed to finish level", false);
         }

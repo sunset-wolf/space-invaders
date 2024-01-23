@@ -19,13 +19,16 @@ public class SpaceDashboard extends Space
     
     // If the enter key is pressed
     private boolean keyDown = false;
+    
+    // Intro sound
+    GreenfootSound intro = new GreenfootSound("Intro.mp3");
     /**
      * Constructor for objects of class SpaceDashboard.
      * 
      */
     public SpaceDashboard()
     {    
-        Greenfoot.playSound("Intro.mp3");
+        intro.play();
         addFlyingAliens();
         addTextMessages();
         addSelector();
@@ -126,6 +129,7 @@ public class SpaceDashboard extends Space
             
             if ((!Greenfoot.isKeyDown("enter")) && keyDown == true) {
                 // Define which level to start
+                intro.stop();
                 if (selectedLevel == 1) {
                     Greenfoot.setWorld(new SpaceGame(SpaceGameLevel.BEGINNER));
                 }
