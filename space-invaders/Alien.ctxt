@@ -1,19 +1,19 @@
 #BlueJ class context
 comment0.target=Alien
-comment0.text=\n\ Alien\ which\ destroys\ the\ spaceship.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment0.text=\r\n\ Alien\ which\ destroys\ the\ spaceship.\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
 comment1.params=colour\ lives
 comment1.target=Alien(AlienColour,\ int)
-comment1.text=\n\ Constructor\ to\ initialize\ the\ actor.\n
+comment1.text=\r\n\ Constructor\ to\ initialize\ the\ actor.\r\n
 comment2.params=
 comment2.target=void\ setAlienImage()
-comment2.text=\n\ Set\ the\ image\ for\ the\ alien.\n
+comment2.text=\r\n\ Set\ the\ image\ for\ the\ alien.\r\n
 comment3.params=liveToAdd
 comment3.target=void\ updateAlienLives(int)
-comment3.text=\n\ Update\ the\ live\ score\ of\ the\ alien.\n
+comment3.text=\r\n\ Update\ the\ live\ score\ of\ the\ alien.\r\n
 comment4.params=
 comment4.target=void\ checkLives()
-comment4.text=\n\ Check\ if\ alien\ has\ still\ lives.\n
+comment4.text=\r\n\ Check\ if\ alien\ has\ still\ lives.\r\n
 comment5.params=
 comment5.target=void\ act()
-comment5.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
+comment5.text=\r\n\ Act\ method\ which\ runs\ in\ endless\ loop.\r\n
 numComments=6
