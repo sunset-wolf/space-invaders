@@ -8,9 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Shot extends MoveableActor
 {
+    // The amount of movement speed
     private int movingSpeed = -3;
+    
+    // If the shot is moving up or down
     private boolean movingUp;
     
+    /**
+     * Constructor for the bullet
+     */
     public Shot(boolean movingUp) {
         super(0,movingUp ? -3 : 3);
         this.movingUp = movingUp;

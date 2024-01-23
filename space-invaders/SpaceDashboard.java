@@ -8,9 +8,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceDashboard extends Space
 {
+    // The amount of levels the game has
     private static final int LEVELCOUNT = 4;
+    
+    // Which level is selected (start at 1)
     private int selectedLevel = 1;
+    
+    // If an arrow key is pressed
     private boolean keyPressed = false;
+    
+    // If the enter key is pressed
     private boolean keyDown = false;
     /**
      * Constructor for objects of class SpaceDashboard.

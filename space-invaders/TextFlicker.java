@@ -1,18 +1,39 @@
 import greenfoot.*;
 
+/**
+ * In this class the flicker on the startscreen will happen
+ * 
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
+ */
+
 public class TextFlicker extends Actor {
+    // This is the text displayed
     private String textMessage;
+    
+    // If the flicker is on or off
     private final boolean flickerOn;
+    
+    // If the flicker can update its message dynamically
     private final boolean isUpdatable;
 
+    // The size of the small text
     private int smallTextSize;
+    
+    // The size of the big text
     private int bigTextSize;
+    
+    // Counter for flicker
     private int count = 0;
+    
+    // If the text is small or big
     private boolean textSmall = true;
+    
+    // The color of the text
     private Color colour;
+    
+    // The soze of the text
     private TextSizing textSizing;
-    private GreenfootImage smallImage;
-    private GreenfootImage bugImage;
 
     public TextFlicker(String textMessage, TextSizing textSizing, boolean flickerOn, boolean isUpdatable, Color colour) {
         this.textMessage = textMessage;

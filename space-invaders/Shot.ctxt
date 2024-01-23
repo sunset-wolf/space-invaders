@@ -3,6 +3,7 @@ comment0.target=Shot
 comment0.text=\r\n\ Shot\ who\ destroys\ everythig\ possible.\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
 comment1.params=movingUp
 comment1.target=Shot(boolean)
+comment1.text=\r\n\ Constructor\ for\ the\ bullet\r\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\r\n\ Act\ method\ which\ runs\ in\ endless\ loop.\r\n

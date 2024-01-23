@@ -1,11 +1,26 @@
 import greenfoot.*;
 import java.util.List;
 
+/**
+ * This actor is for the movement of the objects
+ * 
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
+ */
+
 public class MoveableActor extends Actor {
+    // The horizontal speed
     protected int horizontalSpeed;
+    
+    // The vertical speed
     protected int verticalSpeed;
+    
+    // The game world of GameSpace
     protected SpaceGame world = (SpaceGame) getWorld();
 
+    /**
+     * Constructor for the MoveableActor
+     */
     public MoveableActor(int horizontalSpeed, int verticalSpeed) {
         this.horizontalSpeed = horizontalSpeed;
         this.verticalSpeed = verticalSpeed;

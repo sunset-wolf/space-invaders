@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=TextFlicker
+comment0.text=\r\n\ In\ this\ class\ the\ flicker\ on\ the\ startscreen\ will\ happen\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
 comment1.params=textMessage\ textSizing\ flickerOn\ isUpdatable\ colour
 comment1.target=TextFlicker(java.lang.String,\ TextSizing,\ boolean,\ boolean,\ greenfoot.Color)
 comment2.params=

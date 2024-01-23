@@ -9,9 +9,13 @@ import java.util.*;
  */
 public class SpaceGame extends Space
 {
-    // The amount of lives for the user;
+    // The amount of lives for the user
     private int lives = 3;
+    
+    // The score the user has
     private int score = 0;
+    
+    // Variable for the level of the game
     private SpaceGameLevel level;
     
     /**
@@ -176,14 +180,23 @@ public class SpaceGame extends Space
         addSpaceship();    
     }
     
+    /**
+     * Return the lives
+     */
     public int getLives() {
         return lives;
     }
     
+    /**
+     * Updates the score
+     */
     public void setScore(int newScore) {
         this.score += newScore;
     }
     
+    /**
+     * Returns the score
+     */
     public int getScore() {
         return score;
     }

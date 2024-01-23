@@ -8,9 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Alien extends MoveableActor
 {
+    // The speed of the alien
     private int movingSpeed;
+    
+    // How many lives the alien has
     private int lives;
+    
+    // Counter for the shiver
     private int count;
+    
+    // How much the aliens will shiver
+    private int shiverAmount = 10;
+    
+    // Variable for the color of the alien
     private AlienColour colour;
     
     /**
@@ -60,11 +70,11 @@ public class Alien extends MoveableActor
     /**
      * Make alien go left and right
      */
-    public void moveLeftAndRight() {
+    private void moveLeftAndRight() {
         if (count % 20 == 0) {
-            setLocation(getX() + 5, getY());
+            setLocation(getX() + shiverAmount, getY());
         } else if (count % 10 == 0) {
-            setLocation(getX() - 5, getY());
+            setLocation(getX() - shiverAmount, getY());
         }
         count++;
     }

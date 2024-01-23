@@ -6,8 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0
  */
-public enum AlienColour
-{
+public enum AlienColour {
     VIOLETT,
     GREEN,
     WHITE,

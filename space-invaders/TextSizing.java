@@ -6,8 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0
  */
-    public enum TextSizing {
-        SMALL, 
-        MIDDLE, 
-        BIG
-    }
+public enum TextSizing {
+    SMALL, 
+    MIDDLE, 
+    BIG
+}

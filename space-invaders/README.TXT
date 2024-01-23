@@ -1,12 +1,13 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all they need to know. The comments should usually include at least:
+This is our version of the famous space invaders game from thbe 20th decade.
+Everything is made from scratch and with our own knowledge.
+We are very proud of our final version of the game and we wish everyone who
+plays this game fun and excitement.
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+PROJECT TITLE: Space-Invaders
+PURPOSE OF PROJECT: Made for the Modul-226b
+VERSION or DATE: 2024.01.25
+HOW TO START THIS PROJECT: Click the "Run" button and choose a game
+AUTHORS: Gabriel Franz and Cornel Forster
+USER INSTRUCTIONS: You can move with the arrow keys and shot with the space key

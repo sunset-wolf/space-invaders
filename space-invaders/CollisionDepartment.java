@@ -2,10 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
 
 /**
- * Write a description of class CollisionDepartment here.
+ * This class check the collision between all objects.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
  */
 public class CollisionDepartment extends Actor
 {
