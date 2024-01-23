@@ -30,7 +30,7 @@ public class SpaceGame extends Space
         createLevel();
         displayLives();
         displayScore(score);
-        sound.play();
+        sound.playLoop();
     }
 
     /**

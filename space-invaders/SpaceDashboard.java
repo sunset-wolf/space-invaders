@@ -28,7 +28,7 @@ public class SpaceDashboard extends Space
      */
     public SpaceDashboard()
     {    
-        intro.play();
+        intro.playLoop();
         addFlyingAliens();
         addTextMessages();
         addSelector();
