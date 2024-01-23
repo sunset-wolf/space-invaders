@@ -10,6 +10,7 @@ public class Alien extends MoveableActor
 {
     private int movingSpeed;
     private int lives;
+    private int count;
     private AlienColour colour;
     
     /**
@@ -55,6 +56,18 @@ public class Alien extends MoveableActor
             getWorld().removeObject(this);
         }
     }
+    
+    /**
+     * Make alien go left and right
+     */
+    public void moveLeftAndRight() {
+        if (count % 20 == 0) {
+            setLocation(getX() + 5, getY());
+        } else if (count % 10 == 0) {
+            setLocation(getX() - 5, getY());
+        }
+        count++;
+    }
 
     /**
      * Act method which runs in endless loop.
@@ -62,5 +75,6 @@ public class Alien extends MoveableActor
     public void act()
     {
         moveWithSpeed();
+        moveLeftAndRight();
     }
 }

@@ -34,33 +34,32 @@ public class SpaceGame extends Space
             case BEGINNER:
                 for(int x = 0; x < 3; x++) {
                     for (int y = 0; y < 3; y++) {
-                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
                     }                
                 }
                 break;
             case MEDIUM:
                 for(int x = 0; x < 7; x++) {
                     for (int y = 0; y < 4; y++) {
-                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
+                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 8 * (x + 1), HEIGHT / 15 * (y + 1));
                     }                
                 }
                 break;
             case HARD:
                 for(int x = 0; x < 3; x++) {
                     for (int y = 0; y < 3; y++) {
-                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
                     }                
                 }
                 break;
             case PRO:
                 for(int x = 0; x < 3; x++) {
                     for (int y = 0; y < 3; y++) {
-                    addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
+                        addObject(new Alien(AlienColour.GREEN, 1), WIDTH / 4 * (x + 1), HEIGHT / 15 * (y + 1));
                     }                
                 }
                 break;
         }
-        
     }
     
     /**

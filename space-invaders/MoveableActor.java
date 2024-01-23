@@ -18,7 +18,7 @@ public class MoveableActor extends Actor {
         // Check if the spaceship is at the edge of a side.
         int worldWidth = getWorld().getWidth();
         if((horizontalSpeed > 0 && getX() > worldWidth - 2) || horizontalSpeed < 0 && getX() < 2) {
-            // Move the spaceshipt to the other side.
+            // Move the spaceship to the other side.
             setLocation(worldWidth - getX(), getY() + verticalSpeed);
         }
         else {
@@ -71,7 +71,7 @@ public class MoveableActor extends Actor {
             if(getOneObjectAtOffset(collisionObject.getX(), collisionObject.getY(), null) == null) {
                 positionOccupied = true;
             }
-            } 
+        } 
     }
     
     /**
