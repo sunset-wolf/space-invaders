@@ -100,4 +100,8 @@ public class TextFlicker extends Actor {
                 return 19;
         }
     }
+    
+    public String getTextMessage() {
+        return textMessage;
+    }
 }

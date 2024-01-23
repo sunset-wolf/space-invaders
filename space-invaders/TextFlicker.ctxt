@@ -15,4 +15,6 @@ comment4.text=\n\ Create\ the\ two\ images\ of\ the\ text.\n
 comment5.params=
 comment5.target=int\ getTextSize()
 comment5.text=\n\ Define\ the\ text\ size.\n
-numComments=6
+comment6.params=
+comment6.target=java.lang.String\ getTextMessage()
+numComments=7

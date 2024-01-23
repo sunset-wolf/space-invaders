@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Spaceship which destroys aliens.
  * 
@@ -50,8 +50,26 @@ public class Spaceship extends MoveableActor
         if(isAllowedToInteract) {
             checkKeys();
             actCounter++;
+            checkForDanger();
             checkAlienCollision();
         }
+    }
+    
+    /**
+     * Check for any dangeours actors.
+     */
+    private void checkForDanger() {
+        World world = getWorld();
+        List<Alien> dangeroursObject = getObjectsInRange(75, Alien.class);
+        String displayHint = dangeroursObject.isEmpty() ? "SPACESHIP SECURE" : "SPACESHIP IN DANGER";
+        List<TextFlicker> textList = world.getObjects(TextFlicker.class);
+        for(TextFlicker singleText: textList) {
+            if(singleText.getTextMessage().equals("SPACESHIP SECURE") || singleText.getTextMessage().equals("SPACESHIP IN DANGER")) {
+                world.removeObject(singleText);
+                break;
+                }
+            }
+        world.addObject(new TextFlicker(displayHint, TextSizing.MIDDLE, false, false, Color.WHITE), world.getWidth() / 2, world.getHeight() - 20);
     }
     
     /**

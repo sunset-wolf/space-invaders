@@ -14,9 +14,6 @@ public class MoveableActor extends Actor {
     
     // The vertical speed
     protected int verticalSpeed;
-    
-    // The game world of GameSpace
-    protected SpaceGame world = (SpaceGame) getWorld();
 
     /**
      * Constructor for the MoveableActor
