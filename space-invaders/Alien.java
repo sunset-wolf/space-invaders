@@ -18,7 +18,7 @@ public class Alien extends MoveableActor
     private int count;
     
     // How much the aliens will shiver
-    private int shiverAmount = 10;
+    private int shiverAmount = 5;
     
     // Variable for the color of the alien
     private AlienColour colour;
