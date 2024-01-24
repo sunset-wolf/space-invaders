@@ -8,8 +8,12 @@ import java.util.List;
  */
 public class EndLine extends Actor
 {
+    // If is at the bottom of the world.
     public boolean isAtBottom;
     
+    /**
+     * Constructor for the EndLine.
+     */
     public EndLine(boolean isAtBottom) {
         this.isAtBottom = isAtBottom;
     }

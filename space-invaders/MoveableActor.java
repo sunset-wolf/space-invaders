@@ -9,14 +9,14 @@ import java.util.List;
  */
 
 public class MoveableActor extends Actor {
-    // The horizontal speed
+    // The horizontal speed.
     protected int horizontalSpeed;
     
-    // The vertical speed
+    // The vertical speed.
     protected int verticalSpeed;
 
     /**
-     * Constructor for the MoveableActor
+     * Constructor for the MoveableActor.
      */
     public MoveableActor(int horizontalSpeed, int verticalSpeed) {
         this.horizontalSpeed = horizontalSpeed;

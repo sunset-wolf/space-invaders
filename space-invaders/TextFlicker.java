@@ -1,7 +1,7 @@
 import greenfoot.*;
 
 /**
- * In this class the flicker on the startscreen will happen
+ * Creation for flickering texts. 
  * 
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0

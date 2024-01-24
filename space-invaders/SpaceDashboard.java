@@ -8,22 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SpaceDashboard extends Space
 {
-    // The amount of levels the game has
+    // The amount of levels the game has.
     private static final int LEVELCOUNT = 4;
     
-    // Which level is selected (start at 1)
+    // Which level is selected (start at 1).
     private int selectedLevel = 1;
     
-    // If it is the first act
+    // If it is the first act.
     private boolean firstAct = true;
     
-    // If an arrow key is pressed
+    // If an arrow key is pressed.
     private boolean keyPressed = false;
     
-    // If the enter key is pressed
+    // If the enter key is pressed.
     private boolean keyDown = false;
     
-    // Intro sound
+    // The intro sound.
     GreenfootSound intro = new GreenfootSound("Intro.mp3");
     /**
      * Constructor for objects of class SpaceDashboard.
@@ -85,7 +85,7 @@ public class SpaceDashboard extends Space
     }
     
     /**
-     * Change selector
+     * Change selector.
      */
     public void changeSelector() {
         Class<Selector> selectorClass = Selector.class;
@@ -126,7 +126,7 @@ public class SpaceDashboard extends Space
             }
             
             if (!Greenfoot.isKeyDown("down") && !Greenfoot.isKeyDown("up")) {
-                // Reset the flag when the key is released
+                // Reset the flag when the key is released.
                 keyPressed = false;
             }
             if (Greenfoot.isKeyDown("enter")) {
@@ -134,7 +134,7 @@ public class SpaceDashboard extends Space
             }
             
             if ((!Greenfoot.isKeyDown("enter")) && keyDown == true) {
-                // Define which level to start
+                // Define which level to start.
                 intro.stop();
                 if (selectedLevel == 1) {
                     Greenfoot.setWorld(new SpaceGame(SpaceGameLevel.BEGINNER));

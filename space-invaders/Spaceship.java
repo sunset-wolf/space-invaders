@@ -17,7 +17,7 @@ public class Spaceship extends MoveableActor
     // True if user interaction is allowed.
     private boolean isAllowedToInteract;
     
-    // True if it is touching Alien
+    // True if it is touching Alien.
     private boolean touchingAlien = false;
     
     // True if user's last interaction was to move right. 

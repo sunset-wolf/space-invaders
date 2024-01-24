@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Selector here.
+ * The selector for choosing a level. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
  */
 public class Selector extends Actor
 {

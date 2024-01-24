@@ -18,5 +18,5 @@ comment5.target=void\ addSelector()
 comment5.text=\n\ Add\ selector.\n
 comment6.params=
 comment6.target=void\ changeSelector()
-comment6.text=\n\ Change\ selector\n
+comment6.text=\n\ Change\ selector.\n
 numComments=7

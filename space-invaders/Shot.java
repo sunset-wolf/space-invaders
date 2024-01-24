@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Shot who destroys everythig possible.
+ * Shot which destroys everythig possible.
  * 
  * @author Gabriel Franz and Cornel Forster
  * @version 1.0
  */
 public class Shot extends MoveableActor
 {
-    // The amount of movement speed
+    // The amount of movement speed.
     private int movingSpeed = -3;
     
-    // If the shot is moving up or down
+    // If the shot is moving up or down.
     private boolean movingUp;
     
     /**

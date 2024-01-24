@@ -9,16 +9,16 @@ import java.util.*;
  */
 public class SpaceGame extends Space
 {
-    // The amount of lives for the user
+    // The amount of lives for the user.
     private int lives = 3;
     
-    // The score the user has
+    // The score the user has.
     private int score = 0;
     
-    // Variable for the level of the game
+    // Variable for the level of the game.
     private SpaceGameLevel level;
     
-    // Game sound
+    // The game sound.
     GreenfootSound sound = new GreenfootSound("Music.mp3");
     /**
      * Constructor for objects of class SpaceGame.

@@ -8,19 +8,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Alien extends MoveableActor
 {
-    // The speed of the alien
+    // The speed of the alien.
     private int movingSpeed;
     
-    // How many lives the alien has
+    // How many lives the alien has.
     private int lives;
     
-    // Counter for the shiver
+    // Counter for the shiver.
     private int count;
     
-    // How much the aliens will shiver
+    // How much the aliens will shiver.
     private int shiverAmount = 5;
     
-    // Variable for the color of the alien
+    // Variable for the color of the alien.
     private AlienColour colour;
     
     /**

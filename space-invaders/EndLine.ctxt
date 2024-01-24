@@ -3,6 +3,7 @@ comment0.target=EndLine
 comment0.text=\n\ Write\ a\ description\ of\ class\ EndLine\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=isAtBottom
 comment1.target=EndLine(boolean)
+comment1.text=\n\ Constructor\ for\ the\ EndLine.\n
 comment2.params=
 comment2.target=void\ act()
 comment2.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n

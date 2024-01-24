@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Shot
-comment0.text=\n\ Shot\ who\ destroys\ everythig\ possible.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment0.text=\n\ Shot\ which\ destroys\ everythig\ possible.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
 comment1.params=movingUp
 comment1.target=Shot(boolean)
 comment1.text=\n\ Constructor\ for\ the\ bullet\n
