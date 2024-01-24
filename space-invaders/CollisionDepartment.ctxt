@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=CollisionDepartment
-comment0.text=\n\ This\ class\ check\ the\ collision\ between\ all\ objects.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
-comment1.params=
-comment1.target=void\ act()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ CollisionDepartment\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-comment2.params=collisionClass
-comment2.target=void\ checkForCollision(java.lang.Class)
-numComments=3
