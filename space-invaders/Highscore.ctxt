@@ -1,9 +1,10 @@
 #BlueJ class context
 comment0.target=Highscore
-comment0.text=\n\ Write\ a\ description\ of\ class\ Highscore\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=highscore
-comment1.target=Highscore(int)
+comment0.text=\n\ Thi\ Highscore\ storage.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment1.params=score\ level
+comment1.target=Highscore(int,\ SpaceGameLevel)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Highscore\n
-comment2.params=
-comment2.target=int\ getHighscore()
+comment2.params=level
+comment2.target=int\ getHighscore(SpaceGameLevel)
+comment2.text=\n\ Gets\ the\ highscore\ of\ a\ level.\n\ \n\ @param\ level\ The\ Spacegame\ level.\n
 numComments=3

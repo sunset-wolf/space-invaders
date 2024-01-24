@@ -1,25 +1,33 @@
+import java.util.HashMap;
+import java.util.Map;
 /**
- * Write a description of class Highscore here.
+ * Thi Highscore storage.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Gabriel Franz and Cornel Forster
+ * @version 1.0
  */
 public class Highscore  
 {
-    // The highscore value
-    private static int highscore;
+    // The highscore values for each level
+    private static Map<SpaceGameLevel, Integer> highscores = new HashMap<>();
 
     /**
      * Constructor for objects of class Highscore
      */
-    public Highscore(int highscore)
-    {
-        if (this.highscore < highscore) {
-            this.highscore = highscore;
+    public Highscore(int score, SpaceGameLevel level) {
+        // Check if the current score is higher than the existing high score for the level.
+        if (!highscores.containsKey(level) || highscores.get(level) < score) {
+            highscores.put(level, score);
         }
     }
-    
-    public static int getHighscore() {
-       return highscore;
+
+    /**
+     * Gets the highscore of a level.
+     * 
+     * @param level The Spacegame level.
+     */
+    public static int getHighscore(SpaceGameLevel level) {
+        // Return the high score for the specified level, or 0 if not available.
+        return highscores.getOrDefault(level, 0);
     }
 }
