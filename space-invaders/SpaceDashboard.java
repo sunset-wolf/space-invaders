@@ -40,11 +40,11 @@ public class SpaceDashboard extends Space
      * Act method which runs in endless loop.
      */
     public void act() {
-        changeSelector();
         if (firstAct = true) {
             intro.playLoop();
             firstAct = false;
         }
+        changeSelector();
     }
     
     /**
