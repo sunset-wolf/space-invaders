@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Space
-comment0.text=\n\ Space\ where\ the\ magic\ or\ the\ clashes\ happens.\n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment0.text=\r\n\ Space\ where\ the\ magic\ or\ the\ clashes\ happens.\r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=Space()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Space.\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Space.\r\n
 comment2.params=
 comment2.target=void\ setBackground()
-comment2.text=\n\ Set\ the\ background\ of\ the\ world.\n
+comment2.text=\r\n\ Set\ the\ background\ of\ the\ world.\r\n
 comment3.params=number
 comment3.target=void\ createStars(int)
-comment3.text=\n\ Create\ random\ stars.\n\ \n\ @param\ number\ The\ number\ of\ stars.\n
+comment3.text=\r\n\ Create\ random\ stars.\r\n\ \r\n\ @param\ number\ The\ number\ of\ stars.\r\n
 numComments=4

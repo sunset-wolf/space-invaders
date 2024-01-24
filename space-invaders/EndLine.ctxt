@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=EndLine
-comment0.text=\n\ Write\ a\ description\ of\ class\ EndLine\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ EndLine\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=isAtBottom
 comment1.target=EndLine(boolean)
 comment2.params=
 comment2.target=void\ act()
-comment2.text=\n\ Act\ method\ which\ runs\ in\ endless\ loop.\n
+comment2.text=\r\n\ Act\ method\ which\ runs\ in\ endless\ loop.\r\n
 comment3.params=
 comment3.target=void\ checkForRespawningActors()
-comment3.text=\n\ Check\ if\ there\ are\ actos\ which\ have\ to\ be\ respawned.\n
+comment3.text=\r\n\ Check\ if\ there\ are\ actos\ which\ have\ to\ be\ respawned.\r\n
 numComments=4

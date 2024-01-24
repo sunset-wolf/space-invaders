@@ -14,6 +14,9 @@ public class SpaceDashboard extends Space
     // Which level is selected (start at 1)
     private int selectedLevel = 1;
     
+    // If it is the first act
+    private boolean firstAct = true;
+    
     // If an arrow key is pressed
     private boolean keyPressed = false;
     
@@ -28,7 +31,6 @@ public class SpaceDashboard extends Space
      */
     public SpaceDashboard()
     {    
-        intro.playLoop();
         addFlyingAliens();
         addTextMessages();
         addSelector();
@@ -39,6 +41,10 @@ public class SpaceDashboard extends Space
      */
     public void act() {
         changeSelector();
+        if (firstAct = true) {
+            intro.playLoop();
+            firstAct = false;
+        }
     }
     
     /**
