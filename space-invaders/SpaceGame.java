@@ -136,7 +136,7 @@ public class SpaceGame extends Space
         addObject(new TextFlicker(endMessage, TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 8*3);
         addObject(new TextFlicker("Your score: " + score, TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 8*4);
         addObject(new TextFlicker("Highscore: " + Highscore.getHighscore(), TextSizing.BIG, false, true, displayColour), WIDTH / 2, HEIGHT / 8*5);
-        Greenfoot.delay(100);
+        Greenfoot.delay(200);
         Greenfoot.setWorld(new SpaceDashboard());
     }
     
