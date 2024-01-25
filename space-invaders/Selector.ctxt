@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Selector
-comment0.text=\n\ The\ selector\ for\ choosing\ a\ level.\ \n\ \n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\n\ @version\ 1.0\n
+comment0.text=\r\n\ The\ selector\ for\ choosing\ a\ level.\ \r\n\ \r\n\ @author\ Gabriel\ Franz\ and\ Cornel\ Forster\r\n\ @version\ 1.0\r\n
 comment1.params=
 comment1.target=Selector()
 numComments=2
